@@ -13,6 +13,15 @@ body{
 }
 
 
+/**
+*
+*
+*
+*LANDING PAGE
+*
+*
+*
+*/
 .introTitle h1{
     text-align: center;
     font-size:3.5rem;
@@ -62,3 +71,21 @@ body{
     color: #535074;
     font-size: 15px;
   }
+
+  /**
+*
+*
+*
+*RECORD VACCINE BATCH PAGE (ADMIN HOMEPAGE)
+*
+*
+*
+*/
+.w{
+    font-size: 100%;
+}
+
+.b{
+    border-radius: 2px;
+    border: solid black;
+}

@@ -18,7 +18,7 @@
       Navigation bar
       navbar-expand-sm is to see all the nav-items before the nav bar collapses
       fixed-top: to make nav bar staying on top of the page when scrolling up or down
-    -->
+    --> 
     <nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top">
       <!--to contain contents in the container in the nav bar-->
       <div class="container">
@@ -27,8 +27,16 @@
           <img src="img/vaccinationIcon.png" width="45" height="auto" alt="PCVSIcon">
           PCVS
         </a>
+       
+        <!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+        <!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+        <!--////////////////////////////////////////////Need to call out the administrator full name (php)////////////////////////////////////////////-->
+        <!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+        <!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+        Welcome, administrator
+   
 
-        <!--
+       <!--
           To toggle the navigation bar
           data-toggle: class that will be applying toggle to 
           data-target: target will be that ID created in div tag below
@@ -45,34 +53,8 @@
             <!--go to footer of the webpage (contact us)-->
             <li class="nav-item">
               <a href="#" class="nav-link" role="button">
-                Contact Us
+                View Vaccine Batch Information
               </a>
-            </li>
-
-            <!--Create dropdown toggle-->
-            <li class="nav-item active dropdown">
-
-              <!--To dropdown the items-->
-              <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Sign Up
-              </a>
-
-              <!--dropdown items-->
-              <ul class="dropdown-menu"aria-labelledby="navbarDropdown">
-              
-                <li>
-                  <a href="adminSignUp" class="dropdown-item">
-                    Sign Up As Healthcare Administrator
-                  </a>
-                </li>
-
-                <li>
-                  <a href="patientSignUp" class="dropdown-item">
-                    Sign Up As Patient
-                  </a>
-                </li>
-
-              </ul>
             </li>
           </ul>
         </div>
@@ -96,55 +78,96 @@
         <div class="col-md-6">
           <div class="d-flex justify-content-center align-items-center">
             <div class="introTitle justify-content-center align-items-center" >
-              <h1 class="text-yellow">Private Covid Vaccination System</h1>
-              <p class="fs-6 fw-light">PCVS is an application developed by 
-                Help University to assist in monitoring COVID-19 outbreak in Malaysia
-                by empowering users to assess their health risk against COVID-19. 
-                This application also provides the Ministry of Health (MOH) with the 
-                necessary information to plan for early and effective countermeasures.</p>
+              <h1 class="text-yellow">Available Vaccines In Malaysia</h1>
+              <h6>Pfizer-BioNTech vaccine</h6>
+              <div class="fs-6 fw-light">
+                On August 23, 2021, the FDA approved the first COVID-19 vaccine. The vaccine has been known as the Pfizer-BioNTech COVID-19 Vaccine, 
+                and will now be marketed as Comirnaty, for the prevention of COVID-19 disease in individuals 16 years of age and older.
+                The vaccine also continues to be available under emergency use authorization (EUA), including for people 12 through 15, 
+                for the administration of a third dose in certain immunocompromised people, and for a single booster dose in people:
+                <ul>
+                  <li>65 and older</li>
+                  <li>18 through 64 at high risk of severe COVID-19</li>
+                  <li>18 through 64 whose frequent institutional or occupational exposure to SARS-CoV-2 puts them at high risk of serious complications of COVID-19 including severe COVID-19</li>
+                </ul>
+              </div>
+
+              <h6>Oxford–AstraZeneca vaccine</h6>
+              <div class="fs-6 fw-light">
+                On 30 December 2020, the vaccine was first approved for use in the UK vaccination programme, 
+                and the first vaccination outside of a trial was administered on 4 January 2021. 
+                The vaccine has since been approved by several medicine agencies worldwide, such as the European Medicines Agency (EMA), 
+                Australian Therapeutic Goods Administration (provisional approval in February 2021), and World Health Organization (WHO). 
+                By July 2021, one billion doses of the vaccine had been released to more than 170 countries worldwide. 
+                Some countries have limited its use to elderly people at higher risk for severe COVID-19 illness due to concerns over the very rare side effects of the vaccine in younger individuals.
+              </div>
+
+              <h6>Sinovac</h6> 
+              <div class="fs-6 fw-light">
+                CoronaVac, also known as the Sinovac COVID-19 vaccine is being used in vaccination campaigns in various countries in Asia, South America, Central America, and Eastern Europe. 
+                By April 2021, Sinovac had a production capacity of 2 billion doses a year. 
+                It is currently being manufactured at several facilities in China, with planned overseas manufacture in Brazil in September 2021 and eventually in Egypt and Hungary.
+                On 1 June 2021, the World Health Organization (WHO) validated the vaccine for emergency use. 
+                Sinovac has signed purchase agreements for 380 million doses from COVAX. 
+                As of July 2021, CoronaVac was the most widely used COVID-19 vaccine in the world, with 943 million doses delivered.
+              </div>
+              
             </div>
         </div>
         </div>
   
         <div class="col-md-6">
           <!--.img-fluid: make image responsive (max-width: 100%, height: auto)-->
-          <img src="img/vaccination3.png" alt="vaccinationClipArt" class="img-fluid">
+          <img src="img/vaccine.png" alt="patientClipArt" class="img-fluid">
         </div>
       </div>
     </div>
     
   <div class="decorate">
-    <div class="container pt-5">
-      <div class="row p-2">
-        <div class="col-md-6 text-center pb-4">
-          <p class="fs-1 fst-italic">We care for your health!</p>
-          <img src="img/doctors.png" alt="doctors" class="img-fluid">
-        </div>
+    <div class="container">
      
-        <div class="col-md-6 formBg p-5">
-          <form>
-            <h3>Login</h3>
-            <p class="text-black-50">Please fill in details</p>
-            <div class="mb-3">
-              <label for="inputUsername" class="form-label">Username</label>
-              <input type="text" class="form-control" id="inputUsername">
-            </div>
-            <div class="mb-3">
-              <label for="inputPassword" class="form-label">Password</label>
-              <input type="password" class="form-control" id="inputPassword">
-            </div>
-  
-            <!-- Checkbox
-            <div class="mb-3 form-check">
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-              <label class="form-check-label" for="exampleCheck1">Check me out</label>
-            </div>
-            -->
-            <button type="submit" class="btn btn-primary">Login</button>
+        <div class="w row formBg p-5">
+          <table class="w border border-dark text-center">
+            <tr>
+              <th class="fs-5" colspan="3">List of Available Vaccines</th>
+            </tr>
+            <tr>
+              <th class="border border-dark px-1">VaccineID</th>
+              <th class="border border-dark px-1">VaccineName</th>
+              <th class="border border-dark px-1">Manufacturer</th>
+            </tr>
+    
+            <tr>
+              <td class="border border-dark">Vaccine01</td>
+              <td class="border border-dark">VaccineName01</td>
+              <td class="border border-dark">Manufacturer01</td>
+            </tr>
+    
+            <tr>
+              <td class="border border-dark">Vaccine02</td>
+              <td class="border border-dark">VaccineName02</td>
+              <td class="border border-dark">Manufacturer02</td>
+            </tr>
             
-          </form>
+            <tr>
+              <td class="border border-dark">Vaccine03</td>
+              <td class="border border-dark">VaccineName03</td>
+              <td class="border border-dark">Manufacturer03</td>
+            </tr>
+    
+            <tr>
+              <td class="border border-dark">Vaccine04</td>
+              <td class="border border-dark">VaccineName04</td>
+              <td class="border border-dark">Manufacturer04</td>
+            </tr>
+    
+            <tr>
+              <td class="border border-dark">Vaccine05</td>
+              <td class="border border-dark">VaccineName05</td>
+              <td class="border border-dark">Manufacturer05</td>
+            </tr>
+          </table>
         </div>
-      </div>
     </div>
   </div>
 
@@ -173,26 +196,24 @@
               </div>
 
               <div class="col-sm-6">
-                <div class="footer-links">
-                  <h4>Pages</h4>
-                  <ul class="list-unstyled">
-                    <li><a href="#">View List of Vaccines</a></li>
-                    <li><a href="#">Sign Up</a></li>
-                    <li><a href="#">Login as administrator</a></li>
-                    <li><a href="#">Link</a></li>
-                  </ul>
-                </div>
+                <h4>Pages</h4>
+                <ul class="list-unstyled">
+                  <li><a href="#">View List of Vaccines</a></li>
+                  <li><a href="#">Sign Up</a></li>
+                  <li><a href="#">Login as administrator</a></li>
+                  <li><a href="#">Link</a></li>
+                </ul>
 
-                <div class="footer-links">
-                  <h4>Contact Us</h4>
-                  <p>
-                    <strong>Address : </strong>No. 15, Jalan Sri Semantan 1, Off, Jalan Semantan<br>
-                    Bukit Damansara, 50490<br>
-                    Kuala Lumpur<br>
-                    <strong>Phone : </strong>012-123-4567<br>
-                    <strong>Email : </strong>PCVS@gmail.com<br>
-                  </p>
-                </div>
+                
+                <h4>Contact Us</h4>
+                <p>
+                  <strong>Address : </strong>No. 15, Jalan Sri Semantan 1, Off, Jalan Semantan<br>
+                  Bukit Damansara, 50490<br>
+                  Kuala Lumpur<br>
+                  <strong>Phone : </strong>012-123-4567<br>
+                  <strong>Email : </strong>PCVS@gmail.com<br>
+                </p>
+                
 
               </div>
 
