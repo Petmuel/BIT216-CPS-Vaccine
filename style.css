@@ -81,11 +81,12 @@ body{
 *
 *
 */
-.w{
-    font-size: 100%;
-}
-
-.b{
-    border-radius: 2px;
-    border: solid black;
+.rnvbBg{
+    background-color: cornsilk;
+    background-image: url(img/recordNewVaccineBatchWallpaper.jpg);
+    background-attachment: fixed ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-width:100%;
+    padding: 10%;
 }
