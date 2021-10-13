@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+  <!-- Stylesheet CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <title>Record New Vaccine Batch</title>
+</head>
+
+<body id="RNVBPage">
+  <!--
+      Navigation bar
+      navbar-expand-sm is to see all the nav-items before the nav bar collapses
+      fixed-top: to make nav bar staying on top of the page when scrolling up or down
+    -->
+  <nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top">
+    <!--to contain contents in the container in the nav bar-->
+    <div class="container">
+      <!--Put title and image of the website-->
+      <a href="#" class="navbar-brand mb-0 h1">
+        <img src="img/vaccinationIcon.png" width="45" height="auto" alt="PCVSIcon">
+        PCVS
+      </a>
+
+      <!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+      <!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+      <!--////////////////////////////////////////////Need to call out the administrator full name (php)////////////////////////////////////////////-->
+      <!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+      <!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+      Welcome, administrator
+
+
+      <!--
+          To toggle the navigation bar
+          data-toggle: class that will be applying toggle to 
+          data-target: target will be that ID created in div tag below
+          add accessible tags: aria-controls, expanded, label
+        -->
+      <button type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" class="navbar-toggler">
+        <!--Add icon for the toggle button-->
+        <span class="navbar-toggler-icon"></span>
+
+      </button>
+      <!--to ensure that this tag to have responsive design to make nav bar function properly-->
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <!--scroll down to list of available vaccine (transition)-->
+          <li class="nav-item">
+            <a href="viewVaccinBatchInfo.html" class="nav-link" role="button">
+              View Vaccine Batch Information
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#footer" class="nav-link transition" role="button">
+              Contact Us
+            </a>
+          </li>
+
+          <!--log out-->
+          <li class="nav-item">
+            <a href="login.html" class="nav-link" role="button">
+              Log Out
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!--Create search bar-->
+      <!--
+          form-control: create some of the stylings for the input
+        
+        <form action="#" class="d-flex">
+          <input type="text" class="form-control me-2" name="search">
+          <button type="submit" class="btn btn-outline-success">
+            Search
+          </button>
+        </form>
+      -->
+    </div>
+  </nav>
+
+  <div class="container rnvbBg mt-5">
+    <div class="row">
+      <div class="col-md-6 text-light fw-light fs-6">
+        <div class="d-flex justify-content-center align-items-center">
+          <div class="introTitle justify-content-center align-items-center">
+            <h1 class="text-warning">Vaccines In Malaysia</h1>
+            <h6>Pfizer-BioNTech vaccine</h6>
+            On August 23, 2021, the FDA approved the first COVID-19 vaccine. The vaccine has been known as the
+            Pfizer-BioNTech COVID-19 Vaccine,
+            and will now be marketed as Comirnaty, for the prevention of COVID-19 disease in individuals 16 years of age
+            and older.
+            <h6>Oxford–AstraZeneca vaccine</h6>
+
+            On 30 December 2020, the vaccine was first approved for use in the UK vaccination programme,
+            and the first vaccination outside of a trial was administered on 4 January 2021.
+            The vaccine has since been approved by several medicine agencies worldwide, such as the European Medicines
+            Agency (EMA),
+            Australian Therapeutic Goods Administration (provisional approval in February 2021), and World Health
+            Organization (WHO).
+            By July 2021, one billion doses of the vaccine had been released to more than 170 countries worldwide.
+
+            <p>
+            <h6>Sinovac</h6>
+
+            CoronaVac, also known as the Sinovac COVID-19 vaccine is being used in vaccination campaigns in various
+            countries in Asia, South America, Central America, and Eastern Europe.
+            By April 2021, Sinovac had a production capacity of 2 billion doses a year.
+            It is currently being manufactured at several facilities in China, with planned overseas manufacture in
+            Brazil in September 2021 and eventually in Egypt and Hungary.
+            As of July 2021, CoronaVac was the most widely used COVID-19 vaccine in the world, with 943 million doses
+            delivered.
+            </p>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <!--.img-fluid: make image responsive (max-width: 100%, height: auto)-->
+        <img src="img/vaccine.png" alt="patientClipArt" class="img-fluid">
+      </div>
+    </div>
+  </div>
+
+  <!--list of available vaccines-->
+  <div class="py-5 px-3 text-center">
+    <!--shadow behind div with rounded corners-->
+    <div class="container decorate shadow-lg py-3 px-4 rounded-3">
+      <h3>List of Available Vaccines</h3>
+      <div class="row horizontalOverflow">
+        <table class="shadow-lg">
+          <tr class="bg-white shadow-sm">
+            <th class="p-3">Select</th>
+            <th class="p-3">VaccineID</th>
+            <th class="p-3">VaccineName</th>
+            <th class="p-3">Manufacturer</th>
+          </tr>
+
+          <tr>
+            <td><a href="#">View</a></td>
+            <td class="p-3">Vaccine01</td>
+            <td class="p-3">VaccineName01</td>
+            <td class="p-3">Manufacturer01</td>
+          </tr>
+
+          <tr class="bg-white shadow-sm">
+            <td><a href="#">View</a></td>
+            <td class="p-3">Vaccine02</td>
+            <td class="p-3">VaccineName02</td>
+            <td class="p-3">Manufacturer02</td>
+          </tr>
+
+          <tr>
+            <td><a href="#">View</a></td>
+            <td class="p-3">Vaccine03</td>
+            <td class="p-3">VaccineName03</td>
+            <td class="p-3">Manufacturer03</td>
+          </tr>
+
+          <tr class="bg-white shadow-sm">
+            <td><a href="#">View</a></td>
+            <td class="p-3">Vaccine04</td>
+            <td class="p-3">VaccineName04</td>
+            <td class="p-3">Manufacturer04</td>
+          </tr>
+
+          <tr>
+            <td><a href="#">View</a></td>
+            <td class="p-3">Vaccine05</td>
+            <td class="p-3">VaccineName05</td>
+            <td class="p-3">Manufacturer05</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+ <!-- ======= Footer ======= -->
+ <footer id="footer" class="section-bg">
+  <div class="footer-top">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-sm-6">
+
+          <div class="footer-info">
+            <img src="img/vaccinationIcon.png" width="45" height="auto" alt="PCVSIcon">
+            <h3>PCVS</h3>
+            <p>There are many Covid-19 test centres that have been set up to manage Covid-19 testing. Private Covid
+              Vaccination System will help allowing the health ministry to keep
+              track of vaccinations that have been administered by healthcare administrators in different healthcare
+              centres.ç
+            </p>
+          </div>
+
+
+        </div>
+
+        <div class="col-sm-6">
+
+
+          <h4>Contact Us</h4>
+          <p>
+            <strong>Address : </strong>No. 15, Jalan Sri Semantan 1, Off, Jalan Semantan<br>
+            Bukit Damansara, 50490<br>
+            Kuala Lumpur<br>
+            <strong>Phone : </strong>012-123-4567<br>
+            <strong>Email : </strong>PCVS@gmail.com<br>
+          </p>
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  </div>
+  </div>
+
+  <div class="container">
+    <div class="copyright">
+      &copy; Copyright <strong>CTIS</strong>. All Rights Reserved
+    </div>
+  </div>
+</footer><!-- End  Footer -->
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
