@@ -39,7 +39,7 @@
 
 .introBg{
     background-color: cornsilk;
-    background-image: url(img/top-bg.png);
+    background-image: url(/img/top-bg.png);
     background-attachment: fixed ;
     background-size: cover;
     background-repeat: no-repeat;
@@ -49,7 +49,7 @@
 }
 
 .decorate{
-    background-image: url(img/bg-decorate.png);
+    background-image: url(/img/bg-decorate.png);
     background-color:rgb(255, 247, 238);
     background-attachment: fixed ;
     background-size:cover;
@@ -83,7 +83,7 @@
 }
 
 .rnvbBg{
-    background-image: url(img/recordNewVaccineBatchWallpaper.jpg);
+    background-image: url(/img/recordNewVaccineBatchWallpaper.jpg);
     background-attachment: fixed ;
     background-size: cover;
     background-repeat: no-repeat;
@@ -105,7 +105,7 @@
 }
 .vvbiBg{
   background-color: cornsilk;
-  background-image: url(img/vvbiWallpaper.jpg);
+  background-image: url(/img/vvbiWallpaper.jpg);
   background-attachment: fixed ;
   background-size: cover;
   background-repeat: no-repeat;
@@ -115,107 +115,4 @@
 
 .listvacBatchBg{
   background-color:rgb(255, 216, 108);
-}
-
- /**
-*
-*
-*
-*Parnia Sakhaei's css
-*
-*
-*/
-* {box-sizing: border-box}
-
-
-
-
-  #input[type=text], input[type=password] {
-    width: 100%;
-    padding: 15px;
-    margin: 5px 0 22px 0;
-    display: inline-block;
-    border: none;
-    background: #f1f1f1;
-  }
-  
-#input[type=text]:focus, input[type=password]:focus {
-  background-color: #ddd;
-  outline: none;
-}
-
-#hr {
-    border: 1px solid #f1f1f1;
-    margin-bottom: 25px;
-  }
-
-
-
-#body {
-  background-image: url('img/bg-decorate.png');
-  background-repeat: no-repeat;
-  background-attachment: fixed; 
-  background-size: 100% 100%;
-}
-
-/* Extra styles for the cancel button */
-.cancelbtn {
-  padding: 14px 20px;
-  background-color: #f37543;
-}
-
-.signupbtn {
-  padding: 14px 20px;
-  background-color: #4395f3;
-}
-
-/* Float cancel and signup buttons and add an equal width */
-.cancelbtn, .signupbtn {
-  float: left;
-  width: 50%;
-}
-
-/* Add padding to container elements */
-
-.container1 {
-    padding: 16px;
-  } 
-/* Clear floats */
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-/* Change styles for cancel button and signup button on extra small screens */
-@media screen and (max-width: 300px) {
-  .cancelbtn, .signupbtn {
-    width: 100%;
-  }
-
-
-  .icon {
-    padding: 10px;
-    background: dodgerblue;
-    color: white;
-    min-width: 50px;
-    text-align: center;
-  }
-
-  
-}
-
-
-.vaccine {
-  background-image: url(img/vaccination1.jpg);
-  background-attachment: fixed ;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 70vh;
-}
-
-.vaccine h1{
-  font-size: 400%;
-  color: rgb(255, 243, 70);
 }
