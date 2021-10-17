@@ -70,12 +70,29 @@
           <input type="password" name="password" class="form-control" id="password" placeholder="Enter password">
         </div>
 
-        <input type="button" value="Patient Login" class="btn btn-danger mt-4 mb-3" onClick="loginCheck()"></input>
+        <input type="button" value="Patient Login" class="btn btn-danger mt-4 mb-3"></input>
       </form>
       <p>If you don't sign up yet, please click <a href="signupPatient.php">here</a></p>
     </div>
   </section>
+  <script>
+  function loginCheck() {
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
 
+    if (username == null || username == '') {
+      alert("userName can't be blank");
+      return false;
+    } if (password.length < 6) {
+      alert('Password must be at least 6 characters long');
+      return false;
+    } if(username!=null && password.length <6 && email!=null)
+      return true;
+    }
+  }
+
+
+  </script>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
