@@ -61,14 +61,15 @@
               <ul class="dropdown-menu"aria-labelledby="navbarDropdown">
 
                 <li>
-                  <a href="signupAdmin.php" class="dropdown-item">
-                    Administrator
+                  <a href="signupPatient.php" class="dropdown-item">
+                    Patient
+
                   </a>
                 </li>
 
                 <li>
-                  <a href="signupPatient.php" class="dropdown-item">
-                    Patient
+                  <a href="signupAdmin.php" class="dropdown-item">
+                    Administrator
                   </a>
                 </li>
 
@@ -89,7 +90,7 @@
 
                 <li>
                   <a href="signiPatient.php" class="dropdown-item">
-                    Patient
+                    PatientLogin
                   </a>
                 </li>
 
