@@ -108,7 +108,7 @@
     integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
     crossorigin="anonymous"></script>
   <script type="text/javascript" src="js/script.js"></script>
-  <script type="text/javascript">
+  <script>
   function signupcheck() {
     var username = document.getElementById("username").value;
     var password = document.getElementById("password").value;
