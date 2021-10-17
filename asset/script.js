@@ -13,7 +13,7 @@ function signupcheck() {
     alert("email can't be blank");
     return;
   } else {
-    return document.signup.submit();
+    return document.signupPatient.submit();
   }
 }
 
