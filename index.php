@@ -73,6 +73,35 @@
                 </li>
 
               </ul>
+
+
+            </li>
+
+            <li class="nav-item active dropdown">
+
+              <!--To dropdown the items-->
+              <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Sign In
+              </a>
+
+              <!--dropdown items-->
+              <ul class="dropdown-menu"aria-labelledby="navbarDropdown">
+
+                <li>
+                  <a href="signiPatient.php" class="dropdown-item">
+                    Patient
+                  </a>
+                </li>
+
+                <li>
+                  <a href="signinAdmin.php" class="dropdown-item">
+                    AdminLogin
+                  </a>
+                </li>
+
+              </ul>
+
+
             </li>
           </ul>
         </div>
