@@ -39,14 +39,9 @@
 
             <!--Healthcare administrator full name is shown after logging in-->
             <?php
-                $sql = "Select fullName from tb_admins where staffID ='1'";
-                $result = mysqli_query($conn, $sql);
-                while($row = mysqli_fetch_assoc($result)){
-                    echo 'Welcome, '.$row["fullName"];
-                }
+                include 'AdminLoginCheck.php';
+                echo currentAdmin;
             ?>
-
-
             <!--
                 To toggle the navigation bar
                 data-toggle: class that will be applying toggle to 
@@ -76,18 +71,6 @@
                 </li>
                 </ul>
             </div>
-
-            <!--Create search bar-->
-            <!--
-                form-control: create some of the stylings for the input
-                
-                <form action="#" class="d-flex">
-                <input type="text" class="form-control me-2" name="search">
-                <button type="submit" class="btn btn-outline-success">
-                    Search
-                </button>
-                </form>
-            -->
         </div>
     </nav>
 
@@ -109,8 +92,6 @@
                         <?php
                             $sql = "Select * from tb_vaccines;";
                             $result = mysqli_query($conn, $sql);
-                            //new array to store vaccines
-                            $vaccines = array();
                             
                             //if there are rows retrieved from database
                             if(mysqli_num_rows($result)>0){
