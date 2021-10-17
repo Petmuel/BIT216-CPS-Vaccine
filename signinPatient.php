@@ -57,7 +57,7 @@
 
   <section>
     <div class="container margin-top">
-      <h2>AdministratorLogin</h2>
+      <h2>Patient Login</h2>
 
       <form method="post" class="form" name="adminLogin" action="adminLoginCheck.php">
         <div class="form-group mt-3">
@@ -71,10 +71,10 @@
           <input type="password" name="password" class="form-control" id="password" placeholder="Enter password">
         </div>
 
-        <button onclick="window.location.href='recordVaccineBatch.php'">Sign In</button>
+        <button onclick="window.location.href='patientMenu.php'">Sign In</button>
 
       </form>
-      <p>If you don't sign up yet, please click <a href="signupAdmin.php">here</a></p>
+      <p>If you don't sign up yet, please click <a href="signupPatient.php">here</a></p>
     </div>
   </section>
   <script>
