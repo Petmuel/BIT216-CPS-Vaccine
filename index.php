@@ -43,7 +43,7 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul class="navbar-nav">
             <!--go to footer of the webpage (contact us)-->
-          
+
 
             <!--Create dropdown toggle-->
             <li class="nav-item active dropdown">
@@ -85,7 +85,7 @@
               <ul class="dropdown-menu"aria-labelledby="navbarDropdown">
 
                 <li>
-                  <a href="signiPatient.php" class="dropdown-item">
+                  <a href="signinPatient.php" class="dropdown-item">
                     PatientLogin
                   </a>
                 </li>
