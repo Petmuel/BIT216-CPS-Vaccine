@@ -11,7 +11,7 @@
   $con = mysqli_connect('localhost', 'root', '', 'cpsvaccine');
 // check the connection
 if($con->connect_error)
-    die(" DB Connection failed " . $con->connect_error)
+    die(" DB Connection failed " . $con->connect_error);
 
 //Check existing user
 $query ="SELECT * FROM tb_patients WHERE username='$username';";
