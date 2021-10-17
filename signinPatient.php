@@ -59,7 +59,7 @@
     <div class="container margin-top">
       <h2>Patient Login</h2>
 
-      <form method="post" class="form" name="adminLogin" action="adminLoginCheck.php">
+      <form method="post" class="form" name="patientLogin" action="patientLoginCheck.php">
         <div class="form-group mt-3">
           <label for="username">Username</label>
           <input type="text" name="username" class="form-control" id="username" aria-describedby="username"
