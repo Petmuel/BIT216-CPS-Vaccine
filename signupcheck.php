@@ -7,7 +7,7 @@
   $ICPassport = $_POST['ICPassport'];
 
 // 1. DB Server connection
-  $con = mysqli_connect('localhost', 'root', '', 'cpsvaccine');
+  $con = mysqli_connect("localhost", "root", "", "cpsvaccine");
 // check the connection
 if($con->connect_error)
     die(" DB Connection failed " . $con->connect_error);
