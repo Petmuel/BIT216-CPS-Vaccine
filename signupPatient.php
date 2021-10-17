@@ -30,7 +30,9 @@
 
       <div class="container">
         <a class="navbar-brand" href="index.php">
-          <i class="fas fa-hands-helping"></i>Cpsvaccine
+            <img src="img/vaccinationIcon.png" width="45" height="auto" alt="PCVSIcon">
+            Cpsvaccine
+          </a>
         </a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar"
@@ -58,7 +60,8 @@
     <div class="container margin-top">
       <h2>Sign up</h2>
 
-      <form method="post" class="form" name="signup" action="signupcheck.php">
+      <form method="post" class="form" name="signup" action="signup
+      check.php">
         <div class="form-group mt-3">
           <label for="username">Username</label>
           <input type="text" name="username" class="form-control" id="username" aria-describedby="username"
