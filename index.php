@@ -30,7 +30,7 @@
 
         <!--
           To toggle the navigation bar
-          data-toggle: class that will be applying toggle to 
+          data-toggle: class that will be applying toggle to
           data-target: target will be that ID created in div tag below
           add accessible tags: aria-controls, expanded, label
         -->
@@ -59,15 +59,15 @@
 
               <!--dropdown items-->
               <ul class="dropdown-menu"aria-labelledby="navbarDropdown">
-              
+
                 <li>
-                  <a href="adminSignUp" class="dropdown-item">
+                  <a href="signupAdmin.php" class="dropdown-item">
                     Administrator
                   </a>
                 </li>
 
                 <li>
-                  <a href="patientSignUp" class="dropdown-item">
+                  <a href="signupPatient.php" class="dropdown-item">
                     Patient
                   </a>
                 </li>
@@ -76,11 +76,11 @@
             </li>
           </ul>
         </div>
-        
+
         <!--Create search bar-->
         <!--
           form-control: create some of the stylings for the input
-        
+
         <form action="#" class="d-flex">
           <input type="text" class="form-control me-2" name="search">
           <button type="submit" class="btn btn-outline-success">
@@ -90,61 +90,35 @@
       -->
       </div>
     </nav>
-    
+
     <div class="container introBg mt-5">
       <div class="row">
         <div class="col-md-6">
           <div class="d-flex justify-content-center align-items-center">
             <div class="introTitle justify-content-center align-items-center" >
               <h1 class="text-yellow">Private Covid Vaccination System</h1>
-              <p class="fs-6 fw-light">PCVS is an application developed by 
+              <p class="fs-6 fw-light">PCVS is an application developed by
                 Help University to assist in monitoring COVID-19 outbreak in Malaysia
-                by empowering users to assess their health risk against COVID-19. 
-                This application also provides the Ministry of Health (MOH) with the 
+                by empowering users to assess their health risk against COVID-19.
+                This application also provides the Ministry of Health (MOH) with the
                 necessary information to plan for early and effective countermeasures.</p>
             </div>
         </div>
         </div>
-  
+
         <div class="col-md-6">
           <!--.img-fluid: make image responsive (max-width: 100%, height: auto)-->
           <img src="img/vaccination3.png" alt="vaccinationClipArt" class="img-fluid">
         </div>
       </div>
     </div>
-    
+
   <div class="decorate">
     <div class="container pt-5">
       <div class="row p-2">
         <div class="col-md-6 text-center pb-4">
           <p class="fs-1 fst-italic">We care for your health!</p>
           <img src="img/doctors.png" alt="doctors" class="img-fluid">
-        </div>
-     
-        <div class="col-md-6 formBg p-5">
-          <form>
-            <h3>Login</h3>
-            <p class="text-black-50">Please fill in details</p>
-            <div class="mb-3">
-              <label for="inputUsername" class="form-label">Username</label>
-              <input type="text" class="form-control" id="inputUsername">
-            </div>
-            <div class="mb-3">
-              <label for="inputPassword" class="form-label">Password</label>
-              <input type="password" class="form-control" id="inputPassword">
-            </div>
-  
-            <!-- sign up links-->
-            <div class="mb-3">
-              <ul class="list-unstyled">
-                Don't have any account? Sign up here as <a href="#">Administrator</a>
-                <a href="#">Patient</a>
-              </ul>
-            </div>
-            
-            <button type="submit" class="btn btn-primary">Login</button>
-            
-          </form>
         </div>
       </div>
     </div>
@@ -201,8 +175,8 @@
   </div>
 </footer><!-- End  Footer -->
 
-  
- 
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
   </body>
 </html>
