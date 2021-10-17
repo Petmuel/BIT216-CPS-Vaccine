@@ -42,7 +42,7 @@
 
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="siginPatient.php">PatientLogin</a>
+              <a class="nav-link" href="signinPatient.php">PatientLogin</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="signinAdmin.php">AdminLogin</a>
@@ -57,9 +57,9 @@
 
   <section>
     <div class="container margin-top">
-      <h2>Patient Login</h2>
+      <h2>AdministratorLogin</h2>
 
-      <form method="post" class="form" name="PatientLogin" action="patientLoginCheck.php">
+      <form method="post" class="form" name="adminLogin" action="adminLoginCheck.php">
         <div class="form-group mt-3">
           <label for="username">Username</label>
           <input type="text" name="username" class="form-control" id="username" aria-describedby="username"
@@ -71,10 +71,10 @@
           <input type="password" name="password" class="form-control" id="password" placeholder="Enter password">
         </div>
 
-        <button onclick="window.location.href='patientMenu.php'">Sign In</button>
+        <button onclick="window.location.href='recordVaccineBatch.php'">Sign In</button>
 
       </form>
-      <p>If you don't sign up yet, please click <a href="signupPatient.php">here</a></p>
+      <p>If you don't sign up yet, please click <a href="signupAdmin.php">here</a></p>
     </div>
   </section>
   <script>
