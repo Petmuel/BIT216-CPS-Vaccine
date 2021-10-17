@@ -43,11 +43,7 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul class="navbar-nav">
             <!--go to footer of the webpage (contact us)-->
-            <li class="nav-item">
-              <a href="#footer" class="nav-link transition" role="button">
-                Contact Us
-              </a>
-            </li>
+          
 
             <!--Create dropdown toggle-->
             <li class="nav-item active dropdown">
