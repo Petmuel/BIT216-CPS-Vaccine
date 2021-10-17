@@ -109,7 +109,27 @@
     integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
     crossorigin="anonymous"></script>
   <script type="text/javascript" src="js/script.js"></script>
+  <script type="text/javascript">
+  function signupcheck() {
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+    var email = document.getElementById("email").value;
 
+    if (username == null || username == '') {
+      alert("userName can't be blank");
+      return;
+    } else if (password.length < 6) {
+      alert('Password must be at least 6 characters long');
+      return;
+    } else if (email == null || email == '') {
+      alert("email can't be blank");
+      return;
+    } else {
+      return document.signupPatient.submit();
+    }
+  }
+
+  </script>
 </body>
 
 </html>
