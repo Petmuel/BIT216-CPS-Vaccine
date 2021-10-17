@@ -42,7 +42,7 @@
 
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="signinPatient.php">PatientLogin.h</a>
+              <a class="nav-link" href="siginPatient.php">PatientLogin.h</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="signinAdmin.php">AdminLogin</a>
