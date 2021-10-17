@@ -20,7 +20,7 @@
   <!-- jquery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-  <title>Welcome to CPS Vaccine</title>
+  <title>Welcome to CRS</title>
 
 </head>
 
@@ -55,7 +55,11 @@
   </header>
 
   <section>
-    <div class="form-group mt-3">
+    <div class="container margin-top">
+      <h2>Sign up</h2>
+
+      <form method="post" class="form" name="signup" action="signupcheck.php">
+        <div class="form-group mt-3">
           <label for="username">Username</label>
           <input type="text" name="username" class="form-control" id="username" aria-describedby="username"
             placeholder="Enter username">
@@ -67,23 +71,36 @@
         </div>
 
         <div class="form-group mt-3">
-          <label for="name">Email</label>
-          <input type="text" name="email" class="form-control" id="email" aria-describedby="email"
-            placeholder="Enter Email">
+          <label for="name">Name</label>
+          <input type="text" name="name" class="form-control" id="name" aria-describedby="name"
+            placeholder="Enter name">
         </div>
 
         <div class="form-group mt-3">
-          <label for="full name">Full Name</label>
-          <input type="text" name="fullname" class="form-control" id="fullname" aria-describedby="fullname"
-            placeholder="Enter fullname ">
+          <label for="phone">Phone</label>
+          <input type="phone" name="phone" class="form-control" id="phone" aria-describedby="phone"
+            placeholder="Enter phone number">
         </div>
 
         <div class="form-group mt-3">
-          <label for="ICPassport">ICPassport</label>
-          <input type="text" name="ICPassport" class="form-control" id="ICPassport" aria-describedby="ICPassport"
-            placeholder="Enter ICPassport">
+          <label for="phone">Country</label>
+          <input type="text" name="country" class="form-control" id="country" aria-describedby="country"
+            placeholder="Enter country">
         </div>
-         <input type="button" value="signup" class="btn btn-danger mt-4" onClick="signupcheck()"></input>
+
+        <div class="form-group mt-3">
+          <label for="Gender">Gender</label>
+          <br>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="gender" id="inlineRadio1" value="Male">
+            <label class="form-check-label" for="inlineRadio1">Male</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="gender" id="inlineRadio2" value="Female">
+            <label class="form-check-label" for="inlineRadio2">Female</label>
+          </div>
+        </div>
+        <input type="button" value="signup" class="btn btn-danger mt-4" onClick="signupcheck()"></input>
 
       </form>
     </div>
