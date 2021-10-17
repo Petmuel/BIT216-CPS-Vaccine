@@ -86,7 +86,7 @@
           <input type="text" name="ICPassport" class="form-control" id="ICPassport" aria-describedby="ICPassport"
             placeholder="Enter ICPassport">
         </div>
-         <input type="button" value="signup" class="btn btn-danger mt-4" onClick="signupcheck()"></input>
+         <input type="button" value="signup" class="btn btn-danger mt-4" onClick="signupcheck.php"></input>
 
       </form>
     </div>
