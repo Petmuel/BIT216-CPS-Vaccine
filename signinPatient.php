@@ -70,7 +70,8 @@
           <input type="password" name="password" class="form-control" id="password" placeholder="Enter password">
         </div>
 
-        <input type="button" value="Patient Login" class="btn btn-danger mt-4 mb-3" a href="patientMenu.php"></input>
+        <button onclick="window.location.href='patientMenu.php'">Sign In</button>
+
       </form>
       <p>If you don't sign up yet, please click <a href="signupPatient.php">here</a></p>
     </div>
