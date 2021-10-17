@@ -57,7 +57,7 @@
     <div class="container margin-top">
       <h2>Sign up</h2>
 
-      <form method="post" class="form" name="signup" action="signupcheck.php">
+      <form method="post" class="form" name="signup" action="signupcheck.php" method="POST">
         <div class="form-group mt-3">
           <label for="username">Username</label>
           <input type="text" name="username" class="form-control" id="username" aria-describedby="username"
