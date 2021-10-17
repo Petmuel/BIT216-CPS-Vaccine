@@ -2,108 +2,118 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <title>Welcome to CRS</title>
 
-  <!-- boostrap -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
-    integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <!-- Favicon-->
+  <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
 
-  <!-- font awesome -->
-  <script src="https://kit.fontawesome.com/1ba7b41d28.js" crossorigin="anonymous"></script>
+  <!-- Font Awesome icons (free version)-->
+  <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
 
-  <!-- google font -->
-  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+  <!-- Google fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic"
+    rel="stylesheet" type="text/css" />
 
-  <!-- style sheet -->
-  <link rel="stylesheet" href="css/styles.css">
+  <!-- Third party plugin CSS-->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet" />
 
-  <!-- jquery -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-  <title>Welcome to CPS-Vaccine</title>
 
+  <!-- Core theme CSS (includes Bootstrap)-->
+  <link href="css/styles.css" rel="stylesheet" />
+  <link href="css/loginstyles.css" rel="stylesheet" />
 </head>
+<html>
 
-<body class="crs">
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top opacity-2">
-
-      <div class="container">
-        <a class="navbar-brand" href="index.php">
-        </a>
-
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar"
-          aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse justify-content-end" id="navbar">
-
-          <ul class="navbar-nav">
-            <li class="nav-item">
+<body class="volunteer">
+  <!-- Navigation-->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="index.php">
+        <i class="fas fa-hands-helping"></i> CPS-Vaccine
+      </a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+        data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+        aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto my-2 my-lg-0">
+          <li class="nav-item">
               <a class="nav-link" href="signinAdmin.php">AdminLogin</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="signinPatient.php">PatientLogin</a>
             </li>
-          </ul>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
+  <br>
+  <br>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+        <div class="card card-signin my-5">
+          <div class="card-body">
+            <h5 class="card-title text-center">Sign Up</h5>
+            <form class="form-signin" method="post" action="signup_check.php">
+              <div class="form-label-group">
+                <input type="Username" id="inputUsername" class="form-control" placeholder="Username" name="username" required
+                  autofocus>
+                <label for="inputUsername">Username</label>
+              </div>
+
+              <div class="form-label-group">
+                <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="password" pattern=".{8,}"   required title="8 chars minimum">
+                <label for="inputPassword">Password</label>
+              </div>
+
+	      <div class="form-label-group">
+                <input type="text" name="email" class="form-control" id="email" aria-describedby="email"
+                  placeholder="Enter email" required>
+                <label for="name">email</label>
+              </div>
+
+
+              <div class="form-label-group">
+                <input type="text" name="fullName" class="form-control" id="fullName" aria-describedby="fullName"
+                  placeholder="Enter fullName" required>
+                <label for="name">Name</label>
+              </div>
+
+
+              <div class="form-label-group">
+                <input type="text" name="ICPassport" class="form-control" id="ICPassport" aria-describedby="ICPassport"
+                  placeholder="Enter ICPassport" required>
+                <label for="country">ICPassport</label>
+              </div>
+
+
+
+              <button class="btn btn-lg btn-primary btn-block text-uppercase mb-3" type="submit">Sign Up</button>
+
+              <h6 class="ml-3">If you already have an account, please click <a href="signinPatient.php">Login</a></h6>
+            </form>
+          </div>
         </div>
       </div>
-    </nav>
-  </header>
-
-  <section>
-    <div class="container margin-top">
-      <h2>Sign up</h2>
-
-      <form method="post" class="form" name="signup" action="signupcheck.php">
-        <div class="form-group mt-3">
-          <label for="username">Username</label>
-          <input type="text" name="username" class="form-control" id="username" aria-describedby="username"
-            placeholder="Enter username">
-        </div>
-
-        <div class="form-group mt-3">
-          <label for="password">Password</label>
-          <input type="password" name="password" class="form-control" id="password" placeholder="Enter password">
-        </div>
-
-        <div class="form-group mt-3">
-          <label for="name">Email</label>
-          <input type="text" name="email" class="form-control" id="email" aria-describedby="email"
-            placeholder="Enter Email">
-        </div>
-
-        <div class="form-group mt-3">
-          <label for="full name">Full Name</label>
-          <input type="text" name="fullname" class="form-control" id="fullname" aria-describedby="fullname"
-            placeholder="Enter fullname ">
-        </div>
-
-        <div class="form-group mt-3">
-          <label for="ICPassport">ICPassport</label>
-          <input type="text" name="ICPassport" class="form-control" id="ICPassport" aria-describedby="ICPassport"
-            placeholder="Enter ICPassport">
-        </div>
-         <input type="button" value="signup" class="btn btn-danger mt-4" onClick="signupcheck()"></input>
-
-      </form>
     </div>
-  </section>
+  </div>
 
-
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
-    integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
-    integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
-    crossorigin="anonymous"></script>
-  <script type="text/javascript" src="js/script.js"></script>
-
+  <!-- Bootstrap core JS-->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Third party plugin JS-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+  <!-- Core theme JS-->
+  <script src="js/scripts.js"></script>
 </body>
 
 </html>
