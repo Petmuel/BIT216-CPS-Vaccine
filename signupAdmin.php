@@ -30,7 +30,9 @@
 
       <div class="container">
         <a class="navbar-brand" href="index.php">
-        </a>
+            <img src="img/vaccinationIcon.png" width="45" height="auto" alt="PCVSIcon">
+            Cpsvaccine
+          </a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar"
           aria-expanded="false" aria-label="Toggle navigation">
