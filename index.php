@@ -65,7 +65,7 @@
 
                 <li>
                   <a href="signupAdmin.php" class="dropdown-item">
-                    Administratorr
+                    Administrator
                   </a>
                 </li>
 
