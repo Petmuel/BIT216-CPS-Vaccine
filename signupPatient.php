@@ -24,13 +24,13 @@
 
 </head>
 
-<body class="crs">
+<body class="cps">
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top opacity-2">
 
       <div class="container">
         <a class="navbar-brand" href="index.php">
-          <i class="fas fa-hands-helping"></i>
+          <i class="fas fa-hands-helping"></i>Cpsvaccine
         </a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar"
