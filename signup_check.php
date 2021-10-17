@@ -19,7 +19,7 @@ try
 
   $username = htmlspecialchars($username, ENT_QUOTES, 'UTF-8');
   $password = htmlspecialchars($password, ENT_QUOTES, 'UTF-8');
-  $email = htmlspecialchars($nemail, ENT_QUOTES, 'UTF-8');
+  $email = htmlspecialchars($email, ENT_QUOTES, 'UTF-8');
   $fullName = htmlspecialchars($fullName, ENT_QUOTES, 'UTF-8');
   $ICPassport = htmlspecialchars($ICPassport, ENT_QUOTES, 'UTF-8');
 
