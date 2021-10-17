@@ -70,7 +70,7 @@
 
                 <!--log out-->
                 <li class="nav-item">
-                    <a href="login.html" class="nav-link" role="button">
+                    <a href="index.php" class="nav-link" role="button">
                     Log Out
                     </a>
                 </li>
@@ -156,13 +156,20 @@
                 </div>
                 <button type="submit" name="submit" class="btn btn-primary">Record</button>
                 <!--display message which stated that admin has successfully recorded new vaccine batch-->
-                <?php
-                    if(isset($_GET['message'])){
-                        $message = $_GET['message'];
-                        echo $message;
-                    }
-                ?>
-                
+                <p class="alert alert-success" id="msg">
+                    <?php
+                        if(isset($_GET['message'])){ 
+                            $message = $_GET['message'];
+                            echo $message;
+                        }
+                    ?>
+                </P>
+                <!--display the message for short period of time by using javascript-->
+                <script>
+                    setTimeout(function(){
+                        document.getElementById('msg').style.display = 'none';
+                    }, 2500);
+                </script>
             </div>
         </div>
     </form>

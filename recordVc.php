@@ -14,27 +14,10 @@
         mysqli_query($conn, $sql);
 
         //redirect back to same page with a message that shows admin has successfully recorded the vaccine batch
-        header('Location: recordNewVaccineBatch.php?message=<p class="alert alert-success">You have successfully recorded a new vaccine batch</p>');
+        header('Location: recordNewVaccineBatch.php?message=You have successfully recorded a new vaccine batch');
         
         
         exit();
-        /*check if input numbers are not valid
-        if(!preg_match("/^[0-9]*$/", $quantityAv)){
-            echo "alert('please enter numeric input on quantity available');";
-            exit();
-        }
-        else{
-            //check if email is valid
-            if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
-                header("Location: ../index.php?signup=email");
-                exit();
-            }
-            else{
-                header("Location: ../index.php?signup=success");
-                exit();
-            }
-        }*/
-        
     }
     
     else{
