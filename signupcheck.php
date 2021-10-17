@@ -16,7 +16,7 @@ if($con->connect_error)
 $query ="SELECT * FROM tb_patients WHERE username='$username';";
 $result = mysqli_query($con,$query);
  if(mysqli_num_rows($result)>0){
-     echo '<script>alert("Userename already exist.");window.location = "signup.php";</script>';
+     echo '<script>alert("Userename already exist.");window.location = "signupPatient.php";</script>';
 
 }else{
   // Insert the values into database table users
