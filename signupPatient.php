@@ -117,15 +117,18 @@
 
     if (username == null || username == '') {
       alert("userName can't be blank");
-      return;
-    } else if (password.length < 6) {
+      return false;
+    }
+     if (password.length < 6) {
       alert('Password must be at least 6 characters long');
-      return;
-    } else if (email == null || email == '') {
+      return false;
+    }
+    if (email == null || email == '') {
       alert("email can't be blank");
-      return;
-    } else {
-      return document.signupPatient.submit();
+      return false;
+    }
+    if (username!=null && password.length <6 && email!=null){
+      return true;
     }
   }
 
