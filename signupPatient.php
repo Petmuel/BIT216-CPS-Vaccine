@@ -91,7 +91,7 @@
             placeholder="Enter ICPassport">
         </div>
 
-        <input type="button" value="signup" class="btn btn-danger mt-4"></input>
+        <input type="button" value="Submit" class="btn btn-danger mt-4"></input>
 
       </form>
     </div>
