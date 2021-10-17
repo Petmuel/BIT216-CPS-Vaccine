@@ -40,7 +40,7 @@
             <!--Healthcare administrator full name is shown after logging in-->
             <?php
                 include 'AdminLoginCheck.php';
-                echo currentAdmin;
+                //echo currentAdmin;
             ?>
             <!--
                 To toggle the navigation bar
