@@ -60,7 +60,7 @@
     <div class="container margin-top">
       <h2>Sign up</h2>
 
-      <form method="post" class="form" name="signup" action="signupcheck.php" method="POST">
+      <form method="post" class="form" name="signup" action="signupcheck_admin.php" method="POST">
         <div class="form-group mt-3">
           <label for="username">Username</label>
           <input type="text" name="username" class="form-control" id="username" aria-describedby="username"
@@ -94,6 +94,31 @@
       </form>
     </div>
   </section>
+
+  <script>
+  function signupcheck() {
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+    var email = document.getElementById("email").value;
+
+    if (username == null || username == '') {
+      alert("userName can't be blank");
+      return false;
+    }
+     if (password.length < 6) {
+      alert('Password must be at least 6 characters long');
+      return false;
+    }
+    if (email == null || email == '') {
+      alert("email can't be blank");
+      return false;
+    }
+    if (username!=null && password.length <6 && email!=null){
+      return true;
+    }
+  }
+
+  </script>
 
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
