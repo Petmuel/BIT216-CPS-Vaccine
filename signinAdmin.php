@@ -59,39 +59,39 @@
     <div class="container margin-top">
       <h2>Admin Login</h2>
 
-      <form method="post" class="form" name="PatientLogin" action="patientLoginCheck.php">
+      <form method="post" class="form" action="AdminLoginCheck.php">
         <div class="form-group mt-3">
           <label for="username">Username</label>
-          <input type="text" name="username" class="form-control" id="username" aria-describedby="username"
-            placeholder="Enter username">
+          <input type="text" name="username" class="form-control" id="username" aria-describedby="username" 
+          placeholder="Enter username" required>
         </div>
 
         <div class="form-group mt-3">
           <label for="password">Password</label>
-          <input type="password" name="password" class="form-control" id="password" placeholder="Enter password">
+          <input type="password" name="password" class="form-control" id="password" placeholder="Enter password" required>
         </div>
 
-        <button onclick="window.location.href='recordNewVaccineBatch.php'">Sign In</button>
+        <button name="submit">Sign In</button>
 
       </form>
       <p>If you don't sign up yet, please click <a href="signupAdmin.php">here</a></p>
     </div>
   </section>
   <script>
-  function loginCheck() {
-    var username = document.getElementById("username").value;
-    var password = document.getElementById("password").value;
+    function loginCheck() {
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
 
-    if (username == null || username == '') {
-      alert("userName can't be blank");
-      return false;
-    } if (password.length < 6) {
-      alert('Password must be at least 6 characters long');
-      return false;
-    } if(username!=null && password.length <6 && email!=null)
-      return true;
+      if (username == null || username == '') {
+        alert("userName can't be blank");
+        return false;
+      } if (password.length < 6) {
+        alert('Password must be at least 6 characters long');
+        return false;
+      } if(username!=null && password.length <6 && email!=null)
+        return true;
+      }
     }
-  }
 
 
   </script>
