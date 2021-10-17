@@ -44,7 +44,7 @@
               <a class="nav-link" href="signinAdmin.php">AdminLogin</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="signinPatient.">PatientLogin</a>
+              <a class="nav-link" href="signinPatient.php">PatientLogin</a>
             </li>
           </ul>
 
