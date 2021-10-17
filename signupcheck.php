@@ -20,7 +20,7 @@ $result = mysqli_query($con,$query);
 
 }else{
   // Insert the values into database table users
-  $sqlQuery = "INSERT INTO tb_patients VALUES ('$username', '$password', '$email', '$fullName', '$ICPassport')";
+  $sqlQuery = "INSERT INTO tb_patients VALUES ("$username", "$password", "$email", "$fullName", "ICPassport")";
 
   // Execute the query
   if ($con->query($sqlQuery) == TRUE ) {
