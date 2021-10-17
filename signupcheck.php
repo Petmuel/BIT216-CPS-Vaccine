@@ -21,7 +21,7 @@ $result = mysqli_query($con,$query);
 
 }else{
   // Insert the values into database table users
-  $sqlQuery = "INSERT INTO tb_volunteers VALUES ('$username', '$password', '$email', '$fullName', '$ICPassport')";
+  $sqlQuery = "INSERT INTO tb_patients VALUES ('$username', '$password', '$email', '$fullName', '$ICPassport')";
 
   // Execute the query
   if ($con->query($sqlQuery) == TRUE ) {
@@ -33,24 +33,7 @@ $result = mysqli_query($con,$query);
 }
 
 
-function signupcheck() {
-  var username = document.signup.username.value;
-  var password = document.signup.password.value;
-  var name = document.signup.name.value;
 
-  if (username == null || username == '') {
-    alert("userName can't be blank");
-    return;
-  } else if (password.length < 6) {
-    alert('Password must be at least 6 characters long');
-    return;
-  } else if (name == null || name == '') {
-    alert("userName can't be blank");
-    return;
-  } else {
-    return document.signup.submit();
-  }
-}
 
 
 // Close DB connection
