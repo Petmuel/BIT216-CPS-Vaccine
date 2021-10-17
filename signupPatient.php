@@ -24,13 +24,15 @@
 
 </head>
 
-<body class="crs">
+<body class="cps">
   <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top opacity-2">
 
       <div class="container">
         <a class="navbar-brand" href="index.php">
-          <i class="fas fa-hands-helping"></i>
+            <img src="img/vaccinationIcon.png" width="45" height="auto" alt="PCVSIcon">
+            Cpsvaccine
+          </a>
         </a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar"
@@ -53,12 +55,14 @@
       </div>
     </nav>
   </header>
+  <br>
+  
 
   <section>
     <div class="container margin-top">
       <h2>Sign up</h2>
 
-      <form method="post" class="form" name="signup" action="signupcheck.php">
+      <form method="post" class="form" name="signup"  action="signupcheck.php">
         <div class="form-group mt-3">
           <label for="username">Username</label>
           <input type="text" name="username" class="form-control" id="username" aria-describedby="username"
@@ -88,7 +92,7 @@
             placeholder="Enter ICPassport">
         </div>
 
-        <input type="button" value="signup" class="btn btn-danger mt-4" onClick="signupcheck()"></input>
+        <input type="submit" value="Submit" class="btn btn-danger mt-4"></input>
 
       </form>
     </div>
@@ -105,7 +109,30 @@
     integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
     crossorigin="anonymous"></script>
   <script type="text/javascript" src="js/script.js"></script>
+  <script>
+  function signupcheck() {
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+    var email = document.getElementById("email").value;
 
+    if (username == null || username == '') {
+      alert("userName can't be blank");
+      return false;
+    }
+     if (password.length < 6) {
+      alert('Password must be at least 6 characters long');
+      return false;
+    }
+    if (email == null || email == '') {
+      alert("email can't be blank");
+      return false;
+    }
+    if (username!=null && password.length <6 && email!=null){
+      return true;
+    }
+  }
+
+  </script>
 </body>
 
 </html>

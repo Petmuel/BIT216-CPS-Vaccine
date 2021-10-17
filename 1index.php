@@ -25,7 +25,7 @@
         <!--Put title and image of the website-->
         <a href="#" class="navbar-brand mb-0 h1">
           <img src="img/vaccinationIcon.png" width="45" height="auto" alt="PCVSIcon">
-          PCVS
+          Cpsvaccine
         </a>
 
         <!--
@@ -43,11 +43,6 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul class="navbar-nav">
             <!--go to footer of the webpage (contact us)-->
-            <li class="nav-item">
-              <a href="#footer" class="nav-link transition" role="button">
-                Contact Us
-              </a>
-            </li>
 
             <!--Create dropdown toggle-->
             <li class="nav-item active dropdown">
@@ -61,18 +56,48 @@
               <ul class="dropdown-menu"aria-labelledby="navbarDropdown">
 
                 <li>
-                  <a href="signupAdmin.php" class="dropdown-item">
-                    Administrator
+                  <a href="signupPatient.php" class="dropdown-item">
+                    Patient
+
                   </a>
                 </li>
 
                 <li>
-                  <a href="signupPatient.php" class="dropdown-item">
-                    Patient
+                  <a href="signupAdmin.php" class="dropdown-item">
+                    Administratorr
                   </a>
                 </li>
 
               </ul>
+
+
+            </li>
+
+            <li class="nav-item active dropdown">
+
+              <!--To dropdown the items-->
+              <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Sign In
+              </a>
+
+              <!--dropdown items-->
+              <ul class="dropdown-menu"aria-labelledby="navbarDropdown">
+
+                <li>
+                  <a href="signinPatient.php" class="dropdown-item">
+                    PatientLogin
+                  </a>
+                </li>
+
+                <li>
+                  <a href="signinAdmin.php" class="dropdown-item">
+                    AdminLogin
+                  </a>
+                </li>
+
+              </ul>
+
+
             </li>
           </ul>
         </div>

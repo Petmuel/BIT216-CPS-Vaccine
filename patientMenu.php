@@ -20,7 +20,7 @@
   <!-- jquery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-  <title>Welcome to CPS-Vaccine</title>
+  <title>Welcome to Cpsvaccine</title>
 
 </head>
 
@@ -30,9 +30,10 @@
 
       <div class="container">
         <a class="navbar-brand" href="index.php">
-            <img src="img/vaccinationIcon.png" width="45" height="auto" alt="PCVSIcon">
-            Cpsvaccine
-          </a>
+          <a class="navbar-brand" href="index.php">
+              <img src="img/vaccinationIcon.png" width="45" height="auto" alt="PCVSIcon">
+              Cpsvaccine
+            </a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar"
           aria-expanded="false" aria-label="Toggle navigation">
@@ -43,10 +44,10 @@
 
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="signinAdmin.php">AdminLogin</a>
+              <a class="nav-link" href="volunteerLogin.php">Request Vaccine</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="signinPatient.php">PatientLogin</a>
+              <a class="nav-link" href="index.php">Signout</a>
             </li>
           </ul>
 
@@ -54,44 +55,12 @@
       </div>
     </nav>
   </header>
+  <br>
 
   <section>
     <div class="container margin-top">
-      <h2>Sign up</h2>
+      <h2>Volunteer Menu</h2>
 
-      <form method="post" class="form" name="signup" action="signupcheck.php" method="POST">
-        <div class="form-group mt-3">
-          <label for="username">Username</label>
-          <input type="text" name="username" class="form-control" id="username" aria-describedby="username"
-            placeholder="Enter username">
-        </div>
-
-        <div class="form-group mt-3">
-          <label for="password">Password</label>
-          <input type="password" name="password" class="form-control" id="password" placeholder="Enter password">
-        </div>
-
-        <div class="form-group mt-3">
-          <label for="name">Email</label>
-          <input type="text" name="email" class="form-control" id="email" aria-describedby="email"
-            placeholder="Enter Email">
-        </div>
-
-        <div class="form-group mt-3">
-          <label for="full name">Full Name</label>
-          <input type="text" name="fullname" class="form-control" id="fullname" aria-describedby="fullname"
-            placeholder="Enter fullname ">
-        </div>
-
-        <div class="form-group mt-3">
-          <label for="staffID">StaffID</label>
-          <input type="text" name="staffID" class="form-control" id="staffID" aria-describedby="staffID"
-            placeholder="Enter StaffID">
-        </div>
-         <input type="button" value="signup" class="btn btn-danger mt-4" onClick="signupcheck()"></input>
-
-      </form>
-    </div>
   </section>
 
 
@@ -104,7 +73,6 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
     integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
     crossorigin="anonymous"></script>
-  <script type="text/javascript" src="js/script.js"></script>
 
 </body>
 
