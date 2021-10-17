@@ -61,7 +61,7 @@
     <div class="container margin-top">
       <h2>Sign up</h2>
 
-      <form method="post" class="form" name="signup" action="signup
+      <form method="post" class="form" name="signup" onsubmit="return signupcheck()" action="signup
       check.php">
         <div class="form-group mt-3">
           <label for="username">Username</label>
@@ -92,7 +92,7 @@
             placeholder="Enter ICPassport">
         </div>
 
-        <input type="button" value="signup" class="btn btn-danger mt-4" onClick="signupcheck()"></input>
+        <input type="button" value="signup" class="btn btn-danger mt-4"></input>
 
       </form>
     </div>

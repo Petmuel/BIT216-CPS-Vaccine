@@ -6,7 +6,7 @@
   $fullName = $_POST['fullName'];
   $ICPassport = $_POST['ICPassport'];
 
-
+ echo "$username";
 // 1. DB Server connection
   $con = mysqli_connect('localhost', 'root', '', 'cpsvaccine');
 // check the connection
