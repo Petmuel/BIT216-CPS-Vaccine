@@ -43,11 +43,13 @@
 
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="signinAdmin.php">AdminLogin</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link" href="signinPatient.php">PatientLogin</a>
             </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="signinAdmin.php">AdminLogin</a>
+            </li>
+
           </ul>
 
         </div>
