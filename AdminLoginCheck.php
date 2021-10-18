@@ -18,7 +18,7 @@
             exit();
         }
         else{
-        // Insert the values into database table users
+        
         echo '<script>alert("Username or password does not match");window.location.href = "signinAdmin.php";</script>';
         exit();
         }

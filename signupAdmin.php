@@ -65,25 +65,22 @@
       <form method="POST" class="form"  action="signupcheck_admin.php">
         <div class="form-group mt-3">
           <label for="username">Username</label>
-          <input type="text" name="username" class="form-control" aria-describedby="username"
-            placeholder="Enter username">
+          <input type="text" name="username" class="form-control" placeholder="Enter username" required>
         </div>
 
         <div class="form-group mt-3">
           <label for="password">Password</label>
-          <input type="password" name="password" class="form-control" placeholder="Enter password">
+          <input type="password" name="password" class="form-control" placeholder="Enter password" required>
         </div>
 
         <div class="form-group mt-3">
           <label for="name">Email</label>
-          <input type="text" name="email" class="form-control" aria-describedby="email"
-            placeholder="Enter Email">
+          <input type="email" name="email" class="form-control" placeholder="Enter Email" required>
         </div>
 
         <div class="form-group mt-3">
           <label for="full name">Full Name</label>
-          <input type="text" name="fullname" class="form-control" aria-describedby="fullname"
-            placeholder="Enter fullname ">
+          <input type="text" name="fullname" class="form-control" placeholder="Enter fullname" required>
         </div>
 
          <button type="submit" class="btn btn-danger mt-4" name="submit">Sign up</button>
