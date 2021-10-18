@@ -60,36 +60,31 @@
     <div class="container margin-top">
       <h2>Sign up</h2>
 
-      <form method="post" class="form" name="signup" action="signupcheck_admin.php" method="POST">
+      <form method="POST" class="form"  action="signupcheck_admin.php">
         <div class="form-group mt-3">
           <label for="username">Username</label>
-          <input type="text" name="username" class="form-control" id="username" aria-describedby="username"
+          <input type="text" name="username" class="form-control" aria-describedby="username"
             placeholder="Enter username">
         </div>
 
         <div class="form-group mt-3">
           <label for="password">Password</label>
-          <input type="password" name="password" class="form-control" id="password" placeholder="Enter password">
+          <input type="password" name="password" class="form-control" placeholder="Enter password">
         </div>
 
         <div class="form-group mt-3">
           <label for="name">Email</label>
-          <input type="text" name="email" class="form-control" id="email" aria-describedby="email"
+          <input type="text" name="email" class="form-control" aria-describedby="email"
             placeholder="Enter Email">
         </div>
 
         <div class="form-group mt-3">
           <label for="full name">Full Name</label>
-          <input type="text" name="fullname" class="form-control" id="fullname" aria-describedby="fullname"
+          <input type="text" name="fullname" class="form-control" aria-describedby="fullname"
             placeholder="Enter fullname ">
         </div>
 
-        <div class="form-group mt-3">
-          <label for="staffID">StaffID</label>
-          <input type="text" name="staffID" class="form-control" id="staffID" aria-describedby="staffID"
-            placeholder="Enter StaffID">
-        </div>
-         <input type="button" value="signup" class="btn btn-danger mt-4" onClick="signupcheck()"></input>
+         <button type="submit" class="btn btn-danger mt-4" name="submit">Sign up</button>
 
       </form>
     </div>
