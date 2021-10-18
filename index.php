@@ -122,8 +122,8 @@
         <div class="col-md-6">
           <div class="d-flex justify-content-center align-items-center">
             <div class="introTitle justify-content-center align-items-center" >
-              <h1 class="text-yellow">Private Covid Vaccination System</h1>
-              <p class="fs-6 fw-light">PCVS is an application developed by
+              <h1 class="text-yellow">CPS - Vaccine System</h1>
+              <p class="fs-6 fw-light">Cpsvaccine is an application developed by
                 Help University to assist in monitoring COVID-19 outbreak in Malaysia
                 by empowering users to assess their health risk against COVID-19.
                 This application also provides the Ministry of Health (MOH) with the
@@ -159,11 +159,11 @@
 
           <div class="footer-info">
             <img src="img/vaccinationIcon.png" width="45" height="auto" alt="PCVSIcon">
-            <h3>PCVS</h3>
+            <h3>Cpsvaccine</h3>
             <p>There are many Covid-19 test centres that have been set up to manage Covid-19 testing. Private Covid
               Vaccination System will help allowing the health ministry to keep
               track of vaccinations that have been administered by healthcare administrators in different healthcare
-              centres.ç
+              centres.
             </p>
           </div>
 
@@ -196,7 +196,7 @@
 
   <div class="container">
     <div class="copyright">
-      &copy; Copyright <strong>CTIS</strong>. All Rights Reserved
+      &copy; Copyright <strong>Cpsvaccine</strong>. All Rights Reserved
     </div>
   </div>
 </footer><!-- End  Footer -->
