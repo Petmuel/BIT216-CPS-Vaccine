@@ -56,7 +56,7 @@
     </nav>
   </header>
   <br>
-  
+
 
   <section>
     <div class="container margin-top">
@@ -117,20 +117,21 @@
 
     if (username == null || username == '') {
       alert("userName can't be blank");
-      return false;
+      return;
     }
      if (password.length < 6) {
       alert('Password must be at least 6 characters long');
-      return false;
+      return;
     }
     if (email == null || email == '') {
       alert("email can't be blank");
-      return false;
+      return;
     }
     if (username!=null && password.length <6 && email!=null){
       return true;
     }
   }
+
 
   </script>
 </body>
