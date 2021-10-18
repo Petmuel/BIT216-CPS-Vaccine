@@ -122,8 +122,8 @@
         <div class="col-md-6">
           <div class="d-flex justify-content-center align-items-center">
             <div class="introTitle justify-content-center align-items-center" >
-              <h1 class="text-yellow">Private Covid Vaccination System</h1>
-              <p class="fs-6 fw-light">PCVS is an application developed by
+              <h1 class="text-yellow">CPS - Vaccome System</h1>
+              <p class="fs-6 fw-light">Cpsvaccine is an application developed by
                 Help University to assist in monitoring COVID-19 outbreak in Malaysia
                 by empowering users to assess their health risk against COVID-19.
                 This application also provides the Ministry of Health (MOH) with the
@@ -196,7 +196,7 @@
 
   <div class="container">
     <div class="copyright">
-      &copy; Copyright <strong>CTIS</strong>. All Rights Reserved
+      &copy; Copyright <strong>Cpsvaccine</strong>. All Rights Reserved
     </div>
   </div>
 </footer><!-- End  Footer -->
