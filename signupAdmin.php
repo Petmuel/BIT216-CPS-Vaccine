@@ -1,3 +1,6 @@
+<?php
+    include_once 'db.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -60,9 +63,29 @@
 
   <section>
     <div class="container margin-top">
-      <h2>Sign up</h2>
+     
 
-      <form method="POST" class="form"  action="signupcheck_admin.php">
+      <form method="POST" class="form py-5"  action="signupcheck_admin.php">
+        <h2>Admin Sign up</h2>
+        <p>Select a Healthcare Centre</p>         
+        <select name="centre" required>
+          <?php
+            $sql = "Select * from tb_healthcarecentres;";
+            $result = mysqli_query($conn, $sql);
+            
+            //if there are rows retrieved from database
+            if(mysqli_num_rows($result)>0){
+              //while there is still have a row of healthcare centres retrieved from database
+              while($row = mysqli_fetch_assoc($result)){
+          ?>
+
+          <!--display healthcare centres which are retrieved from database-->
+          <option><?php echo $row["centreName"];?></option>
+          <?php
+                } //end of while loop
+            }  
+          ?>
+        </select>
         <div class="form-group mt-3">
           <label for="username">Username</label>
           <input type="text" name="username" class="form-control" placeholder="Enter username" required>

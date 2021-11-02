@@ -1,5 +1,6 @@
 <?php
     include_once 'db.php';
+    session_start();
 ?>
 <!doctype html>
 <html lang="en">
@@ -37,11 +38,23 @@
                 PCVS
             </a>
 
-            <!--Healthcare administrator full name is shown after logging in-->
+            <!--Healthcare centre name is shown after logging in-->
+            <text name="callCentre">
             <?php
-                include 'AdminLoginCheck.php';
-                //echo currentAdmin;
+                
+                $uName = $_SESSION['user_name'];
+                $sql = "SELECT * FROM tb_admins WHERE username = '$uName';";
+                $result = mysqli_query($conn, $sql);
+
+                if (mysqli_num_rows($result) > 0) {
+                    //while there is still have a row of admins retrieved from database
+                    while($row = mysqli_fetch_assoc($result)) {
+                      echo "Welcome, ".$row["fullName"];
+                    }
+                }
             ?>
+            </text>
+            
             <!--
                 To toggle the navigation bar
                 data-toggle: class that will be applying toggle to 
@@ -79,7 +92,7 @@
     <form action="recordVc.php" method="GET">
         <div class="pt-5 text-center shadow-lg">
             <!--list of available vaccines-->
-            <div class="container decorate border-1 py-5">  
+            <div class="container decorate border-1 py-5 px-4">  
                 <h3>List of Available Vaccines</h3>
                 <h5>Select a Vaccine to Record New Batch</h5>
                 <div class="row horizontalOverflow">
@@ -87,14 +100,14 @@
                         <tr class="border-1">
                             <th class="p-3">VaccineID</th>
                             <th class="p-3">VaccineName</th>
-                            <th class="p-3">Manufacturer</th>
+                            <th class="p-3">Manufacturer</th>   
                         </tr>
                         <?php
                             $sql = "Select * from tb_vaccines;";
                             $result = mysqli_query($conn, $sql);
                             
                             //if there are rows retrieved from database
-                            if(mysqli_num_rows($result)>0){
+                            if(mysqli_num_rows($result)>0){     
                                 //while there is still have a row of vaccines retrieved from database
                                 while($row = mysqli_fetch_assoc($result)){
                         ?>
@@ -127,7 +140,7 @@
 
                     <div class="col-lg-6 py-3">
                         <label for="exDate">Expiry Date</label>
-                        <input type="date" id="exDate" name="exDate" required>
+                        <input type="date" id="mDate" name="exDate" required>
                     </div> 
 
                     <div class="col-lg-6 py-3">
@@ -136,20 +149,44 @@
                     </div>
                 </div>
                 <button type="submit" name="submit" class="btn btn-primary">Record</button>
-                <!--display message which stated that admin has successfully recorded new vaccine batch-->
+                <!--display message which stated that admin has successfully recorded new vaccine batch
+                    declared in recordVc.php-->
+                
+                <?php
+                    if(isset($_GET['message'])){ 
+                        $message = $_GET['message'];
+                ?>
                 <p class="alert alert-success" id="msg">
-                    <?php
-                        if(isset($_GET['message'])){ 
-                            $message = $_GET['message'];
-                            echo $message;
-                        }
-                    ?>
+                    <?php echo $message; ?>
                 </P>
+                <?php
+                    }
+                ?>
+                
                 <!--display the message for short period of time by using javascript-->
                 <script>
                     setTimeout(function(){
                         document.getElementById('msg').style.display = 'none';
                     }, 2500);
+
+                    var date = new Date();
+                    var day = date.getDate();
+                    var month = date.getMonth() +1;
+                    var year = date.getUTCFullYear();
+                    //if day, month or year is less than 10, add 0 to its left side to make it 2 digits
+                    if (day<10){
+                        day = '0' + day;
+                    }
+                    if (month<10){
+                        month = '0' + month;
+                    }
+                    if (year<10){
+                        year = '0' + year;
+                    }
+                    var minDate = year + "-" + month + "-" + day;
+                    document.getElementById('mDate').setAttribute("value", minDate);
+                    document.getElementById('mDate').setAttribute("min", minDate);
+                    console.log(minDate);
                 </script>
             </div>
         </div>
