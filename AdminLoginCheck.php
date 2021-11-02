@@ -16,7 +16,9 @@
 
         //validate login input
         if($row['username'] == $username && $row['password'] == $password){
-            $_SESSION['user_name'] = $username;
+            $staffID = $row['staffID'];
+            $_SESSION["user_name"] = $username;
+            $_SESSION["staff_ID"] = $staffID;
             echo '<script>alert("Login successful!");window.location.href = "recordNewVaccineBatch.php";</script>';
             exit();
         }

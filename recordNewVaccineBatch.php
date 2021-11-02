@@ -17,19 +17,27 @@
     <title>Record New Vaccine Batch</title>
 
     <style>
+        body{
+            background-color: rgb(232, 252, 255);
+        }
+        
+        .listBg{
+            background-color:rgb(154, 195, 255);
+        }
+
         .horizontalOverflow{
         overflow-x: auto;
         }
     </style>
 </head>
 
-<body class="bg-warning bg-opacity-10">
+<body>
     <!--
       Navigation bar
       navbar-expand-sm is to see all the nav-items before the nav bar collapses
       fixed-top: to make nav bar staying on top of the page when scrolling up or down
     -->
-    <nav class="navbar navbar-expand-sm navbar-dark text-light bg-dark fixed-top opacity-2">
+    <nav class="navbar navbar-expand-sm navbar-dark text-light bg-dark">
         <!--to contain contents in the container in the nav bar-->
         <div class="container">
             <!--Put title and image of the website-->
@@ -38,8 +46,8 @@
                 PCVS
             </a>
 
-            <!--Healthcare centre name is shown after logging in-->
-            <text name="callCentre">
+            <!--Current admin full name is shown after logging in-->
+            <text>
             <?php
                 
                 $uName = $_SESSION['user_name'];
@@ -71,7 +79,7 @@
                 <ul class="navbar-nav">
                 <!--scroll down to list of available vaccine (transition)-->
                 <li class="nav-item">
-                    <a href="viewVaccineBatchInfo.html" class="nav-link" role="button">
+                    <a href="viewVaccineBatchInfo.php" class="nav-link" role="button">
                     View Vaccine Batch Information
                     </a>
                 </li>
@@ -90,9 +98,9 @@
 
     <!--Record new vaccine batch-->
     <form action="recordVc.php" method="GET">
-        <div class="pt-5 text-center shadow-lg">
+        <div class="pt-5 text-center">
             <!--list of available vaccines-->
-            <div class="container decorate border-1 py-5 px-4">  
+            <div class="container decorate border-1 py-3 px-5 shadow-lg listBg">  
                 <h3>List of Available Vaccines</h3>
                 <h5>Select a Vaccine to Record New Batch</h5>
                 <div class="row horizontalOverflow">
@@ -114,8 +122,8 @@
                             <!--display list of vaccines which are retrieved from database-->
                             <tr class="border-1">
                                 <td class="px-3">
-                                    <div class="form-check">
-                                        <!--to store vaccineID in input radio type-->
+                                    <div class="form-check">  
+                                        <!--to store vaccineID in value of input radio type-->
                                         <input class="form-check-input" type="radio" name="vac" value="<?php echo $row["vaccineID"];?>" required>
                                         <label class="form-check-label" for="vac">
                                             <!--display vaccineID-->
@@ -134,7 +142,7 @@
                     </table>
                 </div>
             
-                
+                    
                 <div class="row py-5">
                     <h4>Record new vaccine batch</h3>
 
