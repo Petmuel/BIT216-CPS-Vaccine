@@ -7,7 +7,7 @@
     $username = $_POST['username'];
     $password =  $_POST['password'];
     //Check existing user
-    $sql ="select * from tb_admins WHERE username='$username' and password='$password';";
+    $sql ="select * from tb_admins WHERE username='$username';";
     $result = mysqli_query($conn, $sql);
     $row = mysqli_fetch_assoc($result);
 
@@ -23,12 +23,9 @@
             exit();
         }
         else{
-        
-        echo '<script>alert("Username or password does not match");window.location.href = "signinAdmin.php";</script>';
-        exit();
+            echo '<script>alert("Username or password does not match");window.location.href = "signinAdmin.php";</script>';
+            exit();
         }
-
     }
 
-    
 ?>

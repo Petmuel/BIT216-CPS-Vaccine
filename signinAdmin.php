@@ -59,7 +59,7 @@
     <div class="container margin-top">
       <h2>Admin Login</h2>
 
-      <form method="post" class="form" action="AdminLoginCheck.php">
+      <form method="POST" class="form" action="AdminLoginCheck.php">
         <div class="form-group mt-3">
           <label for="username">Username</label>
           <input type="text" name="username" class="form-control" id="username" aria-describedby="username" 
