@@ -65,7 +65,7 @@
     <div class="container margin-top">
 
 
-      <form method="POST" class="form py-5"  action="">
+      <form method="GET" class="form py-5"  action="viewBatch.php">
         <h2>Request Vaccine</h2>
         <p>Select Vaccine:</p>
         <select name="vaccine" required>
@@ -106,33 +106,22 @@
           ?>
         </select>
 
-        <p>Batch No:</p>
+        <button type="submit" class="btn btn-danger mt-4" name="submit">Request</button>
+
+      </form>
+
+      <form method="GET">
+      <p>Batch No:</p>
         <select name="batchNo" required>
           <?php
-            $sql = "Select * from tb_batches;";
-            $result = mysqli_query($conn, $sql);
 
-            //if there are rows retrieved from database
-            if(mysqli_num_rows($result)>0){
-              //while there is still have a row of healthcare centres retrieved from database
-              while($row = mysqli_fetch_assoc($result)){
           ?>
-
           <!--display healthcare centres which are retrieved from database-->
           <option><?php echo $row["batchNo"];?></option>
           <?php
-                } //end of while loop
-            }
+                  
           ?>
         </select>
-
-        <div class="col-lg-6 py-3">
-            <label for="exDate">Appointment Date</label>
-            <input type="date" id="mDate" name="exDate" required>
-        </div>
-
-         <button type="submit" class="btn btn-danger mt-4" name="submit">Request</button>
-
       </form>
     </div>
   </section>
