@@ -46,11 +46,11 @@
 
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="signinPatient.php">Request Vaccine</a>
+              <a class="nav-link" href="requestVaccine.php">Request Vaccine</a>
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="signinAdmin.php">Sign Out</a>
+              <a class="nav-link" href="index.php">Sign Out </a>
             </li>
 
           </ul>
@@ -65,10 +65,10 @@
     <div class="container margin-top">
 
 
-      <form method="POST" class="form py-5"  action="signupcheck_admin.php">
+      <form method="POST" class="form py-5"  action="">
         <h2>Request Vaccine</h2>
         <p>Select Vaccine:</p>
-        <select name="vaccnine" required>
+        <select name="vaccine" required>
           <?php
             $sql = "Select * from tb_vaccines;";
             $result = mysqli_query($conn, $sql);
@@ -85,7 +85,7 @@
                 } //end of while loop
             }
           ?>
-
+          </select>
         <p>Select a Healthcare Centre:</p>
         <select name="centre" required>
           <?php
@@ -104,33 +104,32 @@
                 } //end of while loop
             }
           ?>
+        </select>
 
+        <p>Batch No:</p>
+        <select name="batchNo" required>
+          <?php
+            $sql = "Select * from tb_batches;";
+            $result = mysqli_query($conn, $sql);
 
-          <p>Batch No</p>
-          <select name="Batch No" required>
-            <?php
-              $sql = "Select * from tb_batches;";
-              $result = mysqli_query($conn, $sql);
+            //if there are rows retrieved from database
+            if(mysqli_num_rows($result)>0){
+              //while there is still have a row of healthcare centres retrieved from database
+              while($row = mysqli_fetch_assoc($result)){
+          ?>
 
-              //if there are rows retrieved from database
-              if(mysqli_num_rows($result)>0){
-                //while there is still have a row of healthcare centres retrieved from database
-                while($row = mysqli_fetch_assoc($result)){
-            ?>
+          <!--display healthcare centres which are retrieved from database-->
+          <option><?php echo $row["batchNo"];?></option>
+          <?php
+                } //end of while loop
+            }
+          ?>
+        </select>
 
-            <!--display healthcare centres which are retrieved from database-->
-            <option><?php echo $row["batchNo"];?></option>
-            <?php
-                  } //end of while loop
-              }
-            ?>
-
-            <div class="col-lg-6 py-3">
-                <label for="exDate">Appointment Date</label>
-                <input type="date" id="mDate" name="exDate" required>
-            </div>
-
-
+        <div class="col-lg-6 py-3">
+            <label for="exDate">Appointment Date</label>
+            <input type="date" id="mDate" name="exDate" required>
+        </div>
 
          <button type="submit" class="btn btn-danger mt-4" name="submit">Request</button>
 
