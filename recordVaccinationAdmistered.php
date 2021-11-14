@@ -91,9 +91,6 @@
           <hr>
           <!-- <a [routerLink]='[{ outlets: { managerRouter: ["recordTester"] } }]' class=" offset-md-0 col-md-12">Record Tester</a> -->
           <a href="./ViewBatch.html" type="button" class="offset-md-0 col-md-12">View Vaccine Batch</a>
-          <hr>
-          <!-- <a [routerLink]='[{ outlets: { managerRouter: ["manageTestKitStock"] } }]' class="offset-md-0 col-md-12">Manage Test Kit stocks</a> -->
-          <a type="button" href="./RecordBatch.html" class="offset-md-0 col-md-12">Record Vaccine Batch</a>
 
           <hr>
         </div>
