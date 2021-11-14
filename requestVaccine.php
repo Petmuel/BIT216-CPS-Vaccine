@@ -26,7 +26,7 @@
                             <select id="vacineType" name ="vacineType" type="text" class="input col-lg-8 col-12" required>
                               <option selected hidden>Choose...</option>
                               <?php
-                                $con = mysqli_connect("localhost", "root", "", "covax");
+                                $con = mysqli_connect("localhost", "root", "", "cpsvaccine");
                                 $script = "select * from vaccine";
                                 $result = mysqli_query($con, $script);
                                 while ($row = $result -> fetch_assoc()) {
@@ -88,7 +88,7 @@
             <!-- Footer Elements -->
             <!-- Copyright -->
             <div class="text-center py-4" style="background-color: #1C2331; color:aliceblue;">© 2021 Copyright:
-                <a href="" style="color: aliceblue;"> Covax.com</a>
+                <a href="" style="color: aliceblue;"> CPS-Vaccine</a>
             </div>
             <!-- Copyright -->
         </footer>
