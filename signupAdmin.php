@@ -67,7 +67,7 @@
 
       <form method="POST" class="form py-5"  action="signupcheck_admin.php">
         <h2>Admin Sign up</h2>
-        <p>Select a Healthcare Centre</p>         
+        <p>Select a Healthcare Centre</p>    
         <select name="centre" required>
           <?php
             $sql = "Select * from tb_healthcarecentres;";
