@@ -66,7 +66,7 @@
 
 
       <form method="POST" class="form py-5"  action="signupcheck_admin.php">
-        <h2>Requst Vaccine</h2>
+        <h2>Request Vaccine</h2>
         <p>Select Vaccine:</p>
         <select name="vaccnine" required>
           <?php
@@ -119,7 +119,7 @@
             ?>
 
             <!--display healthcare centres which are retrieved from database-->
-            <option><?php echo $row["BatchNo"];?></option>
+            <option><?php echo $row["batchNo"];?></option>
             <?php
                   } //end of while loop
               }
