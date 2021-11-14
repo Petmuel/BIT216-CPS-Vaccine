@@ -73,8 +73,8 @@
 
   <body class="container-fluid" >
     <header class="row">
-      <a href="../home.html" title="Log Out!" class="offset-md-0 col-md-4 offset-1 col-10 offset-sm-0 col-sm-6 offset-lg-0 col-lg-3"> <h2 >Covax Ltd.</h2> </a>
-      <h4 class="offset-md-2 col-md-6 offset-0 col-6 offset-sm-0 col-sm-3 offset-lg-5 col-lg-4">Username: &nbsp <strong>Doston1405</strong></h4>
+      <a href="../home.html" title="Log Out!" class="offset-md-0 col-md-4 offset-1 col-10 offset-sm-0 col-sm-6 offset-lg-0 col-lg-3"> <h2 >CPS-Vaccine</h2> </a>
+      <h4 class="offset-md-2 col-md-6 offset-0 col-6 offset-sm-0 col-sm-3 offset-lg-5 col-lg-4">Username: &nbsp <strong>Kelvin</strong></h4>
     </header>
 
     <!-- START: left-Side Menu -->
