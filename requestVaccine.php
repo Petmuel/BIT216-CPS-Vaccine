@@ -29,9 +29,9 @@
         body{
             background-color: rgb(232, 252, 255);
         }
-        
+
         .listBg{
-            background-color: green;
+            background-color: yellow;
         }
 
         .horizontalOverflow{
@@ -83,30 +83,30 @@
     <form action="reqAppoint.php" method="GET">
         <div class="pt-5 text-center">
             <!--list of available vaccines-->
-            <div class="container decorate border-1 py-3 px-5 shadow-lg listBg">  
+            <div class="container decorate border-1 py-3 px-5 shadow-lg listBg">
                 <h3>List of Available Vaccines Batches</h3>
                 <h5>Select a Vaccine Batch to Request An Appointment</h5>
                 <div class="row horizontalOverflow">
                     <table class="bg-light">
                         <tr class="border-1">
                             <th class="p-3">BatchNo</th>
-                            <th class="p-3">Vaccine</th>  
-                            <th class="p-3">Quantity Available</th>   
-                            <th class="p-3">Center</th>  
+                            <th class="p-3">Vaccine</th>
+                            <th class="p-3">Quantity Available</th>
+                            <th class="p-3">Center</th>
                         </tr>
                         <?php
                             $sql = "Select * from tb_batches;";
                             $result = mysqli_query($conn, $sql);
-                            
+
                             //if there are rows retrieved from database
-                            if(mysqli_num_rows($result)>0){     
+                            if(mysqli_num_rows($result)>0){
                                 //while there is still have a row of vaccines retrieved from database
                                 while($row = mysqli_fetch_assoc($result)){
                         ?>
                             <!--display list of vaccines which are retrieved from database-->
                             <tr class="border-1">
                                 <td class="px-3">
-                                    <div class="form-check">  
+                                    <div class="form-check">
                                         <!--to store vaccineID in value of input radio type-->
                                         <input class="form-check-input" type="radio" name="batchNum" value="<?php echo $row["batchNo"];?>" required>
                                         <label class="form-check-label" for="batchNum">
@@ -118,10 +118,10 @@
                                 <td class="p-3"><?php echo $row["vaccine"];?></td>
                                 <td class="p-3"><?php echo $row["quantityAvailable"];?></td>
                                 <td class="p-3">
-                                  <?php 
+                                  <?php
                                     $sql2 = "Select * from tb_admins;";
                                     $result2 = mysqli_query($conn, $sql2);
-                                    
+
                                     //if there are rows retrieved from database
                                     if(mysqli_num_rows($result2)>0){
                                       while($row2 = mysqli_fetch_assoc($result2)){
@@ -135,27 +135,27 @@
                             </tr>
                         <?php
                                 } //end of while loop
-                            }  
+                            }
                         ?>
-                        
+
                     </table>
                 </div>
-            
-                    
+
+
                 <div class="text-center py-3">
                     <h4>Enter your appointment date</h3>
 
                     <div class="py-2">
                         <label for="appointmentDate">Appointment Date</label>
                         <input type="date" id="aDate" name="appointmentDate" required>
-                    </div> 
+                    </div>
                 </div>
                 <button type="submit" name="submit" class="btn btn-primary">Request</button>
                 <!--display message which stated that admin has successfully recorded new vaccine batch
                     declared in recordVc.php-->
-                
+
                 <?php
-                    if(isset($_GET['message'])){ 
+                    if(isset($_GET['message'])){
                         $message = $_GET['message'];
                 ?>
                 <p class="alert alert-success" id="msg">
@@ -164,7 +164,7 @@
                 <?php
                     }
                 ?>
-                
+
                 <!--display the message for short period of time by using javascript-->
                 <script>
                     setTimeout(function(){
@@ -188,7 +188,7 @@
                     var minDate = year + "-" + month + "-" + day;
                     document.getElementById('aDate').setAttribute("value", minDate);
                     document.getElementById('aDate').setAttribute("min", minDate);
-                    
+
                 </script>
             </div>
         </div>
