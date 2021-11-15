@@ -71,7 +71,6 @@
           <input type="password" name="password" class="form-control" id="password" placeholder="Enter password">
         </div>
         <button onclick="window.location.href='requestVaccine.php'">Sign In</button>
-
       </form>
       <p>If you don't sign up yet, please click <a href="signupPatient.php">here</a></p>
     </div>
