@@ -164,31 +164,6 @@
                 <button type="submit" name="confirm" class="btn btn-primary">Confirm Vaccination Appointment</button>
                 <button type="submit" name="record" class="btn btn-primary" onclick="openStatus()" >Record Vaccination Administered</button>
 
-              <form method="POST" action="vaccinations_check.php" class="m-3" id="myForm">
-              <h3 class="mt-4 mb-4"> Update Status & remark</h3>
-              <div class="form-group row">
-                <label for="inputStatus" class="col-sm-2 col-form-label">Status</label>
-                <div class="col-sm-10">
-                  <select id="inputStatus" class="form-control" name="status">
-                    <option selected>Choose</option>
-                    <option>Accepted</option>
-                    <option>Pending</option>
-                  </select>
-                 </div>
-              </div>
-              <div class="form-group row">
-                <label for="inputRemark" class="col-sm-2 col-form-label">Remarks</label>
-                <div class="col-sm-10">
-                  <input type="text" name="remark" class="form-control" id="inputRemark" required>
-                </div>
-              </div>
-              <div class="form-group row">
-                <div class="col-sm-10">
-                  <button class="btn btn-success mt-3" type="submit">Update</button>
-
-            </div>
-        </div>
-    </form>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
