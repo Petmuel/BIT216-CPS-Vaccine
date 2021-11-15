@@ -1,4 +1,23 @@
+<?php
+session_start();
+session_regenerate_id(true);
 
+
+$dsn = 'mysql:dbname=cpsvaccine;host=localhost;charset=utf8';
+$db_user = "root";
+$db_password = "";
+
+$dbh = new PDO($dsn, $db_user, $db_password);
+$dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+$sql = 'SELECT * FROM tb_vaccinations';
+$prepare = $dbh->prepare($sql);
+$prepare->execute();
+$result = $prepare->fetchAll(PDO::FETCH_ASSOC);
+
+$bdh = null;
+
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -99,99 +118,32 @@
     <!-- Start: Main Content  -->
       <div style="margin-top:5vh;" class="main-content offset-md-0 col-md-8 offset-0 col-12 offset-sm-1 col-sm-10 offset-lg-0 col-lg-9">
 
-        <div class="row">
 
-          <div class="col-12">
+        <div class="container-fluid">
+          <h3 class="m-4">Record Vaccination Administered</h3>
+          <div class="container">
             <table class="table">
               <thead class="thead-dark">
                 <tr>
-                  <th scope="col">Patient</th>
+                  <th scope="col">VaccinationID</th>
                   <th scope="col">Date</th>
                   <th scope="col">Status</th>
-                  <th scope="col">Action</th>
+                  <th scope="col">Remark</th>
                 </tr>
               </thead>
-            <tbody>
-              <tr>
-                <td>Doston</td>
-                <td>2020/10/20</td>
-                <td>Pending</td>
-                <td>
-                  <!-- <button type="button" class="btn btn-primary" name="button">Administer</button> -->
-                  <button type="button" class="btn btn-success" name="button">Confirm</button>
-                  <button type="button" class="btn btn-danger" name="button">Reject</button>
-                </td>
-              </tr>
-              <tr>i
-                <td>Kenta</td>
-                <td>2020/10/21</td>
-                <td>Pending</td>
-                <td>
-                  <!-- <button type="button" class="btn btn-primary" name="button">Administer</button> -->
-                  <button type="button" class="btn btn-success" name="button">Confirm</button>
-                  <button type="button" class="btn btn-danger" name="button">Reject</button>
-                </td>
-              </tr>
-              <tr>
-                <td>Modu Xan</td>
-                <td>2020/10/21</td>
-                <td>Pending</td>
-                <td>
-                  <!-- <button type="button" class="btn btn-primary" name="button">Administer</button> -->
-                  <button type="button" class="btn btn-success" name="button">Confirm</button>
-                  <button type="button" class="btn btn-danger" name="button">Reject</button>
-                </td>
-              </tr>
-              <tr>
-                <td>Bilge Xan</td>
-                <td>2020/10/21</td>
-                <td>Pending</td>
-                <td>
-                  <!-- <button type="button" class="btn btn-primary" name="button">Administer</button> -->
-                  <button type="button" class="btn btn-success" name="button">Confirm</button>
-                  <button type="button" class="btn btn-danger" name="button">Reject</button>
-                </td>
-              </tr>
-              <tr>
-                <td>Attila Xan</td>
-                <td>2020/10/21</td>
-                <td>Confirmed</td>
-                <td>
-                  <button type="button" onclick="openUpdateKit()" class="btn btn-primary" id="myBtn" name="button">Administer</button>
-                  <!-- <button type="button" class="btn btn-success" name="button">Confirm</button> -->
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+              <tbody>
+                <?php foreach($result as $vaccination): ?>
+                <tr>
+                  <td><?php echo $vaccination['vaccinationID']; ?></td>
+                  <td><?php echo $vaccination['appointmentDate']; ?></td>
+                  <td><?php echo $vaccination['status']; ?></td>
+                  <td><?php echo $vaccination['remarks']; ?></td>
+                </tr>
+                <?php endforeach; ?>
+              </tbody>
+            </table>
 
 
-        </div>
-
-
-<!-- Trigger/Open The Modal -->
-<div class="row">
-  <!-- The Modal -->
-  <div id="myModal" class="modal row">
-
-    <!-- Modal content -->
-    <div class="modal-content col-6 offset-3" style="">
-      <label for="">Patient: </label> <p>Kenta</p>
-        <label for="">IC: </label> <p>AA1234567</p>
-          <label for="">Batch No: </label> <p>B001</p>
-            <label for="">Expiry date: </label> <p>12/12/2022</p>
-              <label for="">Manufacturer: </label> <p>CoronaVac</p>
-                <label for="">Vaccine: </label> <p>SINOVAC</p>
-                <textarea name="name" rows="5" cols="80" placeholder="Remark here..."></textarea>
-                <div class="row">
-                <button type="button" class="btn btn-primary col-4 offset-1" onclick="document.getElementById('myModal').style.display = 'none';">Confirm</button>
-                <button type="button" class="btn btn-danger col-4 offset-1" onclick="document.getElementById('myModal').style.display = 'none';">Reject</button>
-                </div>
-
-    </div>
-
-  </div>
-</div>
 
 
 <script>
