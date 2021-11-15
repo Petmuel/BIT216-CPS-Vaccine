@@ -90,8 +90,7 @@
                     <table class="bg-light">
                         <tr class="border-1">
                             <th class="p-3">BatchNo</th>
-                            <th class="p-3">Vaccine</th>
-                            <th class="p-3">Expiry Date</th>  
+                            <th class="p-3">Vaccine</th>  
                             <th class="p-3">Quantity Available</th>   
                             <th class="p-3">Center</th>  
                         </tr>
@@ -117,7 +116,6 @@
                                     </div>
                                 </td>
                                 <td class="p-3"><?php echo $row["vaccine"];?></td>
-                                <td class="p-3" id="expiryDate"><?php echo $row["expiryDate"];?></td>
                                 <td class="p-3"><?php echo $row["quantityAvailable"];?></td>
                                 <td class="p-3">
                                   <?php 
@@ -152,7 +150,7 @@
                         <input type="date" id="aDate" name="appointmentDate" required>
                     </div> 
                 </div>
-                <button type="submit" name="submit" class="btn btn-primary">Record</button>
+                <button type="submit" name="submit" class="btn btn-primary">Request</button>
                 <!--display message which stated that admin has successfully recorded new vaccine batch
                     declared in recordVc.php-->
                 
