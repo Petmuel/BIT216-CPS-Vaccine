@@ -7,9 +7,9 @@
 <head>
   <meta charset="UTF-8">
 
-  <!-- boostrap -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
-    integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
 
   <!-- font awesome -->
   <script src="https://kit.fontawesome.com/1ba7b41d28.js" crossorigin="anonymous"></script>
@@ -24,6 +24,20 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
   <title>Welcome to CPS-Vaccine</title>
+
+  <style>
+        body{
+            background-color: rgb(232, 252, 255);
+        }
+        
+        .listBg{
+            background-color: green;
+        }
+
+        .horizontalOverflow{
+        overflow-x: auto;
+        }
+    </style>
 
 </head>
 
@@ -65,64 +79,122 @@
     <div class="container margin-top">
 
 
-      <form method="GET" class="form py-5"  action="viewBatch.php">
-        <h2>Request Vaccine</h2>
-        <p>Select Vaccine:</p>
-        <select name="vaccine" required>
-          <?php
-            $sql = "Select * from tb_vaccines;";
-            $result = mysqli_query($conn, $sql);
+      <!--Record new vaccine batch-->
+    <form action="reqAppoint.php" method="GET">
+        <div class="pt-5 text-center">
+            <!--list of available vaccines-->
+            <div class="container decorate border-1 py-3 px-5 shadow-lg listBg">  
+                <h3>List of Available Vaccines Batches</h3>
+                <h5>Select a Vaccine Batch to Request An Appointment</h5>
+                <div class="row horizontalOverflow">
+                    <table class="bg-light">
+                        <tr class="border-1">
+                            <th class="p-3">BatchNo</th>
+                            <th class="p-3">Vaccine</th>
+                            <th class="p-3">Expiry Date</th>  
+                            <th class="p-3">Quantity Available</th>   
+                            <th class="p-3">Center</th>  
+                        </tr>
+                        <?php
+                            $sql = "Select * from tb_batches;";
+                            $result = mysqli_query($conn, $sql);
+                            
+                            //if there are rows retrieved from database
+                            if(mysqli_num_rows($result)>0){     
+                                //while there is still have a row of vaccines retrieved from database
+                                while($row = mysqli_fetch_assoc($result)){
+                        ?>
+                            <!--display list of vaccines which are retrieved from database-->
+                            <tr class="border-1">
+                                <td class="px-3">
+                                    <div class="form-check">  
+                                        <!--to store vaccineID in value of input radio type-->
+                                        <input class="form-check-input" type="radio" name="batchNum" value="<?php echo $row["batchNo"];?>" required>
+                                        <label class="form-check-label" for="batchNum">
+                                            <!--display vaccineID-->
+                                            <?php echo $row["batchNo"];?>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td class="p-3"><?php echo $row["vaccine"];?></td>
+                                <td class="p-3" id="expiryDate"><?php echo $row["expiryDate"];?></td>
+                                <td class="p-3"><?php echo $row["quantityAvailable"];?></td>
+                                <td class="p-3">
+                                  <?php 
+                                    $sql2 = "Select * from tb_admins;";
+                                    $result2 = mysqli_query($conn, $sql2);
+                                    
+                                    //if there are rows retrieved from database
+                                    if(mysqli_num_rows($result2)>0){
+                                      while($row2 = mysqli_fetch_assoc($result2)){
+                                        if($row2["staffID"] == $row["staffID"]){
+                                          echo $row2["centre"];
+                                        }
+                                      }
+                                    }
+                                  ?>
+                                </td>
+                            </tr>
+                        <?php
+                                } //end of while loop
+                            }  
+                        ?>
+                        
+                    </table>
+                </div>
+            
+                    
+                <div class="text-center py-3">
+                    <h4>Enter your appointment date</h3>
 
-            //if there are rows retrieved from database
-            if(mysqli_num_rows($result)>0){
-              //while there is still have a row of healthcare centres retrieved from database
-              while($row = mysqli_fetch_assoc($result)){
-          ?>
+                    <div class="py-2">
+                        <label for="appointmentDate">Appointment Date</label>
+                        <input type="date" id="aDate" name="appointmentDate" required>
+                    </div> 
+                </div>
+                <button type="submit" name="submit" class="btn btn-primary">Record</button>
+                <!--display message which stated that admin has successfully recorded new vaccine batch
+                    declared in recordVc.php-->
+                
+                <?php
+                    if(isset($_GET['message'])){ 
+                        $message = $_GET['message'];
+                ?>
+                <p class="alert alert-success" id="msg">
+                    <?php echo $message; ?>
+                </P>
+                <?php
+                    }
+                ?>
+                
+                <!--display the message for short period of time by using javascript-->
+                <script>
+                    setTimeout(function(){
+                        document.getElementById('msg').style.display = 'none';
+                    }, 2500);
 
-          <!--display healthcare centres which are retrieved from database-->
-          <option><?php echo $row["vaccineName"];?></option>
-          <?php
-                } //end of while loop
-            }
-          ?>
-          </select>
-        <p>Select a Healthcare Centre:</p>
-        <select name="centre" required>
-          <?php
-            $sql = "Select * from tb_healthcarecentres;";
-            $result = mysqli_query($conn, $sql);
-
-            //if there are rows retrieved from database
-            if(mysqli_num_rows($result)>0){
-              //while there is still have a row of healthcare centres retrieved from database
-              while($row = mysqli_fetch_assoc($result)){
-          ?>
-
-          <!--display healthcare centres which are retrieved from database-->
-          <option><?php echo $row["centreName"];?></option>
-          <?php
-                } //end of while loop
-            }
-          ?>
-        </select>
-
-        <button type="submit" class="btn btn-danger mt-4" name="submit">Request</button>
-
-      </form>
-
-      <form method="GET">
-      <p>Batch No:</p>
-        <select name="batchNo" required>
-          <?php
-
-          ?>
-          <!--display healthcare centres which are retrieved from database-->
-          <option><?php echo $row["batchNo"];?></option>
-          <?php
-                  
-          ?>
-        </select>
-      </form>
+                    var date = new Date();
+                    var day = date.getDate();
+                    var month = date.getMonth() +1;
+                    var year = date.getUTCFullYear();
+                    //if day, month or year is less than 10, add 0 to its left side to make it 2 digits
+                    if (day<10){
+                        day = '0' + day;
+                    }
+                    if (month<10){
+                        month = '0' + month;
+                    }
+                    if (year<10){
+                        year = '0' + year;
+                    }
+                    var minDate = year + "-" + month + "-" + day;
+                    document.getElementById('aDate').setAttribute("value", minDate);
+                    document.getElementById('aDate').setAttribute("min", minDate);
+                    
+                </script>
+            </div>
+        </div>
+    </form>
     </div>
   </section>
 
