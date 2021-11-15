@@ -135,7 +135,7 @@ $bdh = null;
                 <?php foreach($result as $vaccination): ?>
                 <tr>
                   <td><?php echo $vaccination['vaccinationID']; ?></td>
-                  <td><?php echo $vaccination['appointmentmentDate']; ?></td>
+                  <td><?php echo $vaccination['appointmentDate']; ?></td>
                   <td><?php echo $vaccination['status']; ?></td>
                   <td><?php echo $vaccination['remarks']; ?></td>
                 </tr>
