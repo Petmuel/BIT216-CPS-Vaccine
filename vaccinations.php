@@ -122,7 +122,7 @@
                   <button type="button" class="btn btn-danger" name="button">Reject</button>
                 </td>
               </tr>
-              <tr>
+              <tr>i
                 <td>Kenta</td>
                 <td>2020/10/21</td>
                 <td>Pending</td>
