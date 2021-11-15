@@ -167,12 +167,6 @@
               <form method="POST" action="vaccinations_check.php" class="m-3">
               <h3 class="mt-4 mb-4"> Update Status & remark</h3>
               <div class="form-group row">
-                <label for="inputID" class="col-sm-2 col-form-label">ApplicationID</label>
-                <div class="col-sm-10">
-                  <input type="number" name="ID" class="form-control" id="inputID" required>
-                </div>
-              </div>
-              <div class="form-group row">
                 <label for="inputStatus" class="col-sm-2 col-form-label">Status</label>
                 <div class="col-sm-10">
                   <select id="inputStatus" class="form-control" name="status">
