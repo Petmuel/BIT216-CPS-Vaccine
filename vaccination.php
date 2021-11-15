@@ -49,7 +49,7 @@
             <!--Current admin full name is shown after logging in-->
             <text>
                 <?php
-                    
+
                     $uName = $_SESSION['user_name'];
                     $sql = "SELECT * FROM tb_admins WHERE username = '$uName';";
                     $result = mysqli_query($conn, $sql);
@@ -64,7 +64,7 @@
             </text>
         <!--
             To toggle the navigation bar
-            data-toggle: class that will be applying toggle to 
+            data-toggle: class that will be applying toggle to
             data-target: target will be that ID created in div tag below
             add accessible tags: aria-controls, expanded, label
             -->
@@ -114,15 +114,15 @@
                         <tr class="bg-white border-1">
                             <th class="p-3">VaccinationID</th>
                             <th class="p-3">Appointment Date</th>
-                            <th class="p-3">Status</th>  
+                            <th class="p-3">Status</th>
                         </tr>
                         <?php
                             $batchNo= $_SESSION['batchNo'];
                             $sql = "SELECT * FROM tb_vaccinations WHERE batchNo = '$batchNo';";
                             $result = mysqli_query($conn, $sql);
-                            
+
                             //if there are rows retrieved from database
-                            if(mysqli_num_rows($result)>0){     
+                            if(mysqli_num_rows($result)>0){
                                 //while there is still have a row of batches retrieved from database
                                 while($row = mysqli_fetch_assoc($result)){
                         ?>
@@ -140,17 +140,17 @@
                                     </label>
                                 </div>
                             </td>
-                            
+
                             <td class="p-3"><?php echo $row["appointmentDate"];?></td>
                             <td class="p-3"><?php echo $row["status"];?></td>
                         </tr>
                         <?php
                                 } //end of while loop
-                            } 
+                            }
                             //if there's no vaccinations
                             else{
                         ?>
-                        
+
                         <th colspan="5" class="bg-white border-1 py-5">
                             There are no vaccinations
                         </th>
@@ -163,6 +163,35 @@
                 <br>
                 <button type="submit" name="confirm" class="btn btn-primary">Confirm Vaccination Appointment</button>
                 <button type="submit" name="record" class="btn btn-primary">Record Vaccination Administered</button>
+
+              <form method="POST" action="vaccinations_check.php" class="m-3">
+              <h3 class="mt-4 mb-4"> Update Status & remark</h3>
+              <div class="form-group row">
+                <label for="inputID" class="col-sm-2 col-form-label">ApplicationID</label>
+                <div class="col-sm-10">
+                  <input type="number" name="ID" class="form-control" id="inputID" required>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="inputStatus" class="col-sm-2 col-form-label">Status</label>
+                <div class="col-sm-10">
+                  <select id="inputStatus" class="form-control" name="status">
+                    <option selected>Choose</option>
+                    <option>Accepted</option>
+                    <option>Pending</option>
+                  </select>
+                 </div>
+              </div>
+              <div class="form-group row">
+                <label for="inputRemark" class="col-sm-2 col-form-label">Remarks</label>
+                <div class="col-sm-10">
+                  <input type="text" name="remark" class="form-control" id="inputRemark" required>
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-sm-10">
+                  <button class="btn btn-success mt-3" type="submit">Update</button>
+
             </div>
         </div>
     </form>
@@ -173,8 +202,8 @@
 
     <!--javascript-->
     <script src="assets/javascript/main.js"></script>
-    
-    
+
+
 
 </body>
 
