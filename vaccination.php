@@ -162,9 +162,9 @@
                 </div>
                 <br>
                 <button type="submit" name="confirm" class="btn btn-primary">Confirm Vaccination Appointment</button>
-                <button type="submit" name="record" class="btn btn-primary">Record Vaccination Administered</button>
+                <button type="submit" name="record" class="btn btn-primary" onclick="openStatus()" >Record Vaccination Administered</button>
 
-              <form method="POST" action="vaccinations_check.php" class="m-3">
+              <form method="POST" action="vaccinations_check.php" class="m-3" id="myForm">
               <h3 class="mt-4 mb-4"> Update Status & remark</h3>
               <div class="form-group row">
                 <label for="inputStatus" class="col-sm-2 col-form-label">Status</label>
@@ -196,6 +196,11 @@
 
     <!--javascript-->
     <script src="assets/javascript/main.js"></script>
+
+    <script>
+    function openStatus() {
+  document.getElementById("myForm").style.display = "block";
+  }
 
 
 
