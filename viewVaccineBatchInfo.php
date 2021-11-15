@@ -96,7 +96,7 @@
 
 
     <!--View vaccine batch information-->
-    <form action="vaccinations.php" method="GET" name="batchInfoList">
+    <form action="viewVaccination.php" method="GET">
         <!--list of available vaccines-->
         <div class="py-5 px-3 text-center">
             <!--shadow behind div with rounded corners-->
