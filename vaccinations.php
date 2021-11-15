@@ -125,7 +125,7 @@ $bdh = null;
             <table class="table">
               <thead class="thead-dark">
                 <tr>
-                  <th scope="col">Patient</th>
+                  <th scope="col">VaccinationID</th>
                   <th scope="col">Date</th>
                   <th scope="col">Status</th>
                   <th scope="col">Remark</th>
@@ -135,50 +135,15 @@ $bdh = null;
                 <?php foreach($result as $vaccination): ?>
                 <tr>
                   <td><?php echo $vaccination['vaccinationID']; ?></td>
-                  <td><?php echo $vaccination['appoinmentDate']; ?></td>
+                  <td><?php echo $vaccination['appointmentmentDate']; ?></td>
                   <td><?php echo $vaccination['status']; ?></td>
-                  <td><?php echo $vaccination['remark']; ?></td>
+                  <td><?php echo $vaccination['remarks']; ?></td>
                 </tr>
                 <?php endforeach; ?>
               </tbody>
             </table>
 
 
-              <form method="POST" action="vaccinations_check.php" class="m-3">
-              <h3 class="mt-4 mb-4">Update Status and remark</h3>
-                <div class="form-group row">
-                  <label for="inputID" class="col-sm-2 col-form-label">ApplicationID</label>
-                  <div class="col-sm-10">
-                    <input type="number" name="ID" class="form-control" id="inputID" required>
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label for="inputStatus" class="col-sm-2 col-form-label">Status</label>
-                  <div class="col-sm-10">
-                    <select id="inputStatus" class="form-control" name="status">
-                      <option selected>Choose</option>
-                      <option>Accepted</option>
-                      <option>Rejected</option>
-                    </select>
-                   </div>
-                </div>
-                <div class="form-group row">
-                  <label for="inputRemark" class="col-sm-2 col-form-label">Remark</label>
-                  <div class="col-sm-10">
-                    <input type="text" name="remark" class="form-control" id="inputRemark" required>
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <div class="col-sm-10">
-                    <button class="btn btn-success mt-3" type="submit">Update</button>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-        </div>
-      </div>
 
 
 <script>
