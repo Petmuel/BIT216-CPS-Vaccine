@@ -20,7 +20,7 @@
   <!-- jquery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-  <title>Welcome to CPS-Vaccine</title>
+  <title>Welcome to Govaccine</title>
 
 </head>
 
@@ -31,7 +31,7 @@
       <div class="container">
         <a class="navbar-brand" href="index.php">
             <img src="img/vaccinationIcon.png" width="45" height="auto" alt="PCVSIcon">
-            Cpsvaccine
+            Govaccine
           </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar"
           aria-expanded="false" aria-label="Toggle navigation">
@@ -62,7 +62,7 @@
       <form method="POST" class="form" action="AdminLoginCheck.php">
         <div class="form-group mt-3">
           <label for="username">Username</label>
-          <input type="text" name="username" class="form-control" id="username" aria-describedby="username" 
+          <input type="text" name="username" class="form-control" id="username" aria-describedby="username"
           placeholder="Enter username" required>
         </div>
 
