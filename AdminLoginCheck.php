@@ -10,7 +10,7 @@
     $sql ="select * from tb_admins WHERE username='$username';";
     $result = mysqli_query($conn, $sql);
     
-
+    
     //check if the admin has clicked the 'Record' button or not
     if (isset($_POST['submit'])){
         if (mysqli_num_rows($result) > 0) {

@@ -101,9 +101,9 @@
     </nav>
 
 
-    <!--View vaccine batch information-->
+    <!--View Vaccinations-->
     <form action="confirm_recordVaccinations.php" method="GET">
-        <!--list of available vaccines-->
+        <!--list of vaccinations-->
         <div class="py-5 px-3 text-center">
             <!--shadow behind div with rounded corners-->
             <div class="container listBg shadow-lg py-3 px-4 rounded-3">
@@ -120,27 +120,25 @@
                             $batchNo= $_SESSION['batchNo'];
                             $sql = "SELECT * FROM tb_vaccinations WHERE batchNo = '$batchNo';";
                             $result = mysqli_query($conn, $sql);
-
                             //if there are rows retrieved from database
                             if(mysqli_num_rows($result)>0){
-                                //while there is still have a row of batches retrieved from database
+                                //while there is still have a row of vaccinations retrieved from database
                                 while($row = mysqli_fetch_assoc($result)){
                         ?>
-                        <!--display list of batches which are retrieved from database-->
+                        <!--display list of vaccinations which are retrieved from database-->
                         <tr class="bg-white border-1">
-                            <!--display message stated that there are no vaccine batch in the list-->
+                            <!--display message stated that there are no vaccinations in the list-->
                             <p id="message"></p>
-                            <!--to store batchNo in value of input radio type-->
+                            <!--to store vaccinationID in value of input radio type-->
                             <td class="px-3">
                                 <div class="form-check">
                                     <input class="form-check-input" type="radio" name="vID" value="<?php echo $row["vaccinationID"];?>" required>
                                     <label class="form-check-label" for="bNo">
-                                        <!--display batchNo-->
+                                        <!--display vaccinationID-->
                                         <?php echo $row["vaccinationID"];?>
                                     </label>
                                 </div>
                             </td>
-
                             <td class="p-3"><?php echo $row["appointmentDate"];?></td>
                             <td class="p-3"><?php echo $row["status"];?></td>
                         </tr>
@@ -150,11 +148,9 @@
                             //if there's no vaccinations
                             else{
                         ?>
-
                         <th colspan="5" class="bg-white border-1 py-5">
                             There are no vaccinations
                         </th>
-
                         <?php
                             }
                         ?>
@@ -163,6 +159,9 @@
                 <br>
                 <button type="submit" name="confirm" class="btn btn-primary">Confirm Vaccination Appointment</button>
                 <button type="submit" name="record" class="btn btn-primary" onclick="openStatus()" >Record Vaccination Administered</button>
+            </div>
+        </div>
+    </form>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
