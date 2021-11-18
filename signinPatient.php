@@ -20,7 +20,7 @@
   <!-- jquery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-  <title>Welcome to CPS-Vaccine</title>
+  <title>Welcome to Govaccine</title>
 
 </head>
 
