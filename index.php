@@ -11,7 +11,7 @@
     <!-- Stylesheet CSS -->
     <link rel="stylesheet" href="asset/style.css">
 
-    <title>CPS-Vaccine</title>
+    <title>Govaccine</title>
   </head>
   <body id="loginPage">
     <!--
@@ -196,7 +196,7 @@
 
   <div class="container">
     <div class="copyright">
-      &copy; Copyright <strong>Cpsvaccine</strong>. All Rights Reserved
+      &copy; Copyright <strong>Govaccine</strong>. All Rights Reserved
     </div>
   </div>
 </footer><!-- End  Footer -->
