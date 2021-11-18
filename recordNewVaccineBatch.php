@@ -13,14 +13,14 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-    
+
     <title>Record New Vaccine Batch</title>
 
     <style>
         body{
             background-color: rgb(232, 252, 255);
         }
-        
+
         .listBg{
             background-color:rgb(154, 195, 255);
         }
@@ -43,13 +43,13 @@
             <!--Put title and image of the website-->
             <a href="#" class="navbar-brand mb-0 h1">
                 <img src="img/vaccinationIcon.png" width="45" height="auto" alt="PCVSIcon">
-                PCVS
+                Govaccine
             </a>
 
             <!--Current admin full name is shown after logging in-->
             <text>
             <?php
-                
+
                 $uName = $_SESSION['user_name'];
                 $sql = "SELECT * FROM tb_admins WHERE username = '$uName';";
                 $result = mysqli_query($conn, $sql);
@@ -62,10 +62,10 @@
                 }
             ?>
             </text>
-            
+
             <!--
                 To toggle the navigation bar
-                data-toggle: class that will be applying toggle to 
+                data-toggle: class that will be applying toggle to
                 data-target: target will be that ID created in div tag below
                 add accessible tags: aria-controls, expanded, label
                 -->
@@ -100,7 +100,7 @@
     <form action="recordVc.php" method="GET">
         <div class="pt-5 text-center">
             <!--list of available vaccines-->
-            <div class="container decorate border-1 py-3 px-5 shadow-lg listBg">  
+            <div class="container decorate border-1 py-3 px-5 shadow-lg listBg">
                 <h3>List of Available Vaccines</h3>
                 <h5>Select a Vaccine to Record New Batch</h5>
                 <div class="row horizontalOverflow">
@@ -108,21 +108,21 @@
                         <tr class="border-1">
                             <th class="p-3">VaccineID</th>
                             <th class="p-3">VaccineName</th>
-                            <th class="p-3">Manufacturer</th>   
+                            <th class="p-3">Manufacturer</th>
                         </tr>
                         <?php
                             $sql = "Select * from tb_vaccines;";
                             $result = mysqli_query($conn, $sql);
-                            
+
                             //if there are rows retrieved from database
-                            if(mysqli_num_rows($result)>0){     
+                            if(mysqli_num_rows($result)>0){
                                 //while there is still have a row of vaccines retrieved from database
                                 while($row = mysqli_fetch_assoc($result)){
                         ?>
                             <!--display list of vaccines which are retrieved from database-->
                             <tr class="border-1">
                                 <td class="px-3">
-                                    <div class="form-check">  
+                                    <div class="form-check">
                                         <!--to store vaccineID in value of input radio type-->
                                         <input class="form-check-input" type="radio" name="vac" value="<?php echo $row["vaccineID"];?>" required>
                                         <label class="form-check-label" for="vac">
@@ -136,20 +136,20 @@
                             </tr>
                         <?php
                                 } //end of while loop
-                            }  
+                            }
                         ?>
-                        
+
                     </table>
                 </div>
-            
-                    
+
+
                 <div class="row py-5">
                     <h4>Record new vaccine batch</h3>
 
                     <div class="col-lg-6 py-3">
                         <label for="exDate">Expiry Date</label>
                         <input type="date" id="mDate" name="exDate" required>
-                    </div> 
+                    </div>
 
                     <div class="col-lg-6 py-3">
                         <label for="quantityAv">Quantity of dose available</label>
@@ -159,9 +159,9 @@
                 <button type="submit" name="submit" class="btn btn-primary">Record</button>
                 <!--display message which stated that admin has successfully recorded new vaccine batch
                     declared in recordVc.php-->
-                
+
                 <?php
-                    if(isset($_GET['message'])){ 
+                    if(isset($_GET['message'])){
                         $message = $_GET['message'];
                 ?>
                 <p class="alert alert-success" id="msg">
@@ -170,7 +170,7 @@
                 <?php
                     }
                 ?>
-                
+
                 <!--display the message for short period of time by using javascript-->
                 <script>
                     setTimeout(function(){
@@ -200,10 +200,10 @@
         </div>
     </form>
 
-    
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
     crossorigin="anonymous"></script>
 </body>
-</html> 
+</html>
