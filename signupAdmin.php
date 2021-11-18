@@ -23,7 +23,7 @@
   <!-- jquery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-  <title>Welcome to CPS-Vaccine</title>
+  <title>Welcome to Govaccine</title>
 
 </head>
 
@@ -34,7 +34,7 @@
       <div class="container">
         <a class="navbar-brand" href="index.php">
             <img src="img/vaccinationIcon.png" width="45" height="auto" alt="PCVSIcon">
-            Cpsvaccine
+            Govaccine
           </a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar"
@@ -63,16 +63,16 @@
 
   <section>
     <div class="container margin-top">
-     
+
 
       <form method="POST" class="form py-5"  action="signupcheck_admin.php">
         <h2>Admin Sign up</h2>
-        <p>Select a Healthcare Centre</p>    
+        <p>Select a Healthcare Centre</p>
         <select name="centre" required>
           <?php
             $sql = "Select * from tb_healthcarecentres;";
             $result = mysqli_query($conn, $sql);
-            
+
             //if there are rows retrieved from database
             if(mysqli_num_rows($result)>0){
               //while there is still have a row of healthcare centres retrieved from database
@@ -83,7 +83,7 @@
           <option><?php echo $row["centreName"];?></option>
           <?php
                 } //end of while loop
-            }  
+            }
           ?>
         </select>
         <div class="form-group mt-3">
