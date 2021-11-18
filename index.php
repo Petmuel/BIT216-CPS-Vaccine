@@ -25,7 +25,7 @@
         <!--Put title and image of the website-->
         <a href="#" class="navbar-brand mb-0 h1">
           <img src="img/vaccinationIcon.png" width="45" height="auto" alt="PCVSIcon">
-          Cpsvaccine
+          Govaccine
         </a>
 
         <!--
