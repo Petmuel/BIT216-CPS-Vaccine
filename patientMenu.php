@@ -20,7 +20,7 @@
   <!-- jquery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-  <title>Welcome to Cpsvaccine</title>
+  <title>Welcome to Govaccine</title>
 
 </head>
 
@@ -32,7 +32,7 @@
         <a class="navbar-brand" href="index.php">
           <a class="navbar-brand" href="index.php">
               <img src="img/vaccinationIcon.png" width="45" height="auto" alt="PCVSIcon">
-              Cpsvaccine
+              Govaccine
             </a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar"
